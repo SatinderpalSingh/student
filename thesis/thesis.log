@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  28 AUG 2017 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  29 AUG 2017 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1258,7 +1258,7 @@ Package biblatex Info: Reference segment=0 on input line 95.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for T1+phv on input line 106.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 107.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -1268,49 +1268,49 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 145.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 146.
 
-Overfull \hbox (28.45271pt too wide) in paragraph at lines 148--148
+Overfull \hbox (28.45271pt too wide) in paragraph at lines 149--149
  [] 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 151.
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
-
- []
-
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 152.
 [3]
-Overfull \hbox (28.45271pt too wide) in paragraph at lines 197--197
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+[5]
+Overfull \hbox (28.45271pt too wide) in paragraph at lines 198--198
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[4] [5]
+[6] [7]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 226.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 227.
  (./thesis.toc
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -1322,316 +1322,317 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
- [6] [7])
-[8] (./thesis.lof) [9] (./thesis.lot) [10]
+ [8] [9])
+[10] (./thesis.lof) [11] (./thesis.lot) [12]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 244.
- [11
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 245.
+ [13
 
 
-] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-[15] <waveform.png, id=474, 704.6325pt x 200.75pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--306
+
+ []
+
+[17] [18] <waveform.png, id=487, 704.6325pt x 200.75pt>
 File: waveform.png Graphic file (type png)
  <use waveform.png>
-Package pdftex.def Info: waveform.png used on input line 324.
+Package pdftex.def Info: waveform.png used on input line 330.
 (pdftex.def)             Requested size: 352.3154pt x 100.37474pt.
- [16
 
- <./waveform.png>] [17]
-<sphinx4_architecture.png, id=486, 363.90071pt x 233.61697pt>
+[19
+
+ <./waveform.png>] [20]
+<sphinx4_architecture.png, id=499, 363.90071pt x 233.61697pt>
 File: sphinx4_architecture.png Graphic file (type png)
 
 <use sphinx4_architecture.png>
-Package pdftex.def Info: sphinx4_architecture.png used on input line 365.
+Package pdftex.def Info: sphinx4_architecture.png used on input line 371.
 (pdftex.def)             Requested size: 363.89981pt x 233.6164pt.
- [18 <./sphinx4_architecture.png>] [19]
-<400px-Mfcc_fig5.png, id=496, 307.53192pt x 214.50351pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22 <./sphinx4_architecture.png>]
+<400px-Mfcc_fig5.png, id=508, 307.53192pt x 214.50351pt>
 File: 400px-Mfcc_fig5.png Graphic file (type png)
 
 <use 400px-Mfcc_fig5.png>
-Package pdftex.def Info: 400px-Mfcc_fig5.png used on input line 399.
+Package pdftex.def Info: 400px-Mfcc_fig5.png used on input line 405.
 (pdftex.def)             Requested size: 307.53116pt x 214.50298pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (8.60364pt too wide) in paragraph at lines 408--409
+Overfull \hbox (8.60364pt too wide) in paragraph at lines 414--415
 []\T1/ptm/m/n/12 (-20) Systems like the Voice Recog-ni-tion Call Pro-cess-ing (
 VRCP)
  []
 
-[20] [21 <./400px-Mfcc_fig5.png>]
-Overfull \hbox (1.13583pt too wide) in paragraph at lines 414--415
+[23] [24 <./400px-Mfcc_fig5.png>]
+Overfull \hbox (1.13583pt too wide) in paragraph at lines 420--421
 []\T1/ptm/m/n/12 (-20) This sys-tem was cre-ated by NYNEX:, Bell-core, and Amer
 itech
  []
 
-[22] [23] [24
+[25] [26] [27
 
-] [25] [26] [27] [28] [29] [30
+] [28] [29] [30] [31] [32] [33] [34
 
 ]
-<tmp725d99_thumb.png, id=543, 642.4pt x 344.28625pt>
+<tmp725d99_thumb.png, id=560, 642.4pt x 344.28625pt>
 File: tmp725d99_thumb.png Graphic file (type png)
  <use tmp725d99_thumb.png>
-Package pdftex.def Info: tmp725d99_thumb.png used on input line 719.
+Package pdftex.def Info: tmp725d99_thumb.png used on input line 725.
 (pdftex.def)             Requested size: 321.19922pt x 172.1427pt.
 
-<mdt_recognizer.png, id=544, 569.12625pt x 302.12875pt>
+<mdt_recognizer.png, id=561, 569.12625pt x 302.12875pt>
 File: mdt_recognizer.png Graphic file (type png)
 
 <use mdt_recognizer.png>
-Package pdftex.def Info: mdt_recognizer.png used on input line 727.
+Package pdftex.def Info: mdt_recognizer.png used on input line 733.
 (pdftex.def)             Requested size: 284.56242pt x 151.064pt.
- [31 <./tmp725d99_thumb.png> <./mdt_recognizer.png>]
-[32
+ [35 <./tmp725d99_thumb.png> <./mdt_recognizer.png>]
+[36
 
-] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 831--833
+] [37] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 837--839
 
  []
 
-<networknuts-linux-fun.png, id=563, 728.7225pt x 460.72125pt>
+<networknuts-linux-fun.png, id=587, 728.7225pt x 460.72125pt>
 File: networknuts-linux-fun.png Graphic file (type png)
 
 <use networknuts-linux-fun.png>
-Package pdftex.def Info: networknuts-linux-fun.png used on input line 836.
+Package pdftex.def Info: networknuts-linux-fun.png used on input line 842.
 (pdftex.def)             Requested size: 400.79861pt x 253.39746pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[35] <Screenshot1.png, id=580, 1371.1225pt x 770.88pt>
+<Screenshot1.png, id=588, 1371.1225pt x 770.88pt>
 File: Screenshot1.png Graphic file (type png)
  <use Screenshot1.png>
-Package pdftex.def Info: Screenshot1.png used on input line 851.
+Package pdftex.def Info: Screenshot1.png used on input line 857.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--863
+Underfull \hbox (badness 10000) in paragraph at lines 865--869
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--863
+Underfull \hbox (badness 10000) in paragraph at lines 865--869
 
  []
 
-[36 <./networknuts-linux-fun.png>] [37 <./Screenshot1.png>]
-<Screenshot2.png, id=592, 500.87125pt x 271.0125pt>
+[40] [41 <./networknuts-linux-fun.png> <./Screenshot1.png>]
+<Screenshot2.png, id=607, 500.87125pt x 271.0125pt>
 File: Screenshot2.png Graphic file (type png)
  <use Screenshot2.png>
-Package pdftex.def Info: Screenshot2.png used on input line 873.
+Package pdftex.def Info: Screenshot2.png used on input line 879.
 (pdftex.def)             Requested size: 500.87001pt x 271.01183pt.
 
-Overfull \hbox (45.62589pt too wide) in paragraph at lines 873--874
+Overfull \hbox (45.62589pt too wide) in paragraph at lines 879--880
  [][] 
  []
 
-[38 <./Screenshot2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42] [43 <./Screenshot2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--924
+Underfull \hbox (badness 10000) in paragraph at lines 923--930
 
  []
 
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--963
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
+Underfull \hbox (badness 10000) in paragraph at lines 962--969
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 970--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--966
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+Underfull \hbox (badness 10000) in paragraph at lines 970--972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
+Underfull \hbox (badness 10000) in paragraph at lines 970--972
 
  []
 
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
 []|\T1/ptm/m/n/12 (+20) Tidigits Dig-its
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 1037--1038
+Underfull \hbox (badness 4060) in paragraph at lines 1043--1044
 []|\T1/ptm/m/n/12 (+20) RM1 Com-mand
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 1039--1040
+Underfull \hbox (badness 1728) in paragraph at lines 1045--1046
 []|\T1/ptm/m/n/12 (+20) WSJ1 5k Small
  []
 
 
-Underfull \hbox (badness 5954) in paragraph at lines 1041--1042
+Underfull \hbox (badness 5954) in paragraph at lines 1047--1048
 []|\T1/ptm/m/n/12 (+20) WSJ1 20k Big
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1066
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1072
 
  []
 
-[43]
-Overfull \hbox (11.1825pt too wide) in paragraph at lines 1076--1088
+[47]
+Overfull \hbox (11.1825pt too wide) in paragraph at lines 1082--1094
 \T1/ptm/m/it/12 (-20) $DEC_CFG_LISTOFFILES = "$DEC_CFG_BASE_DIR/etc/$DEC_CFG_DB
 _NAME_test.fileids";
  []
 
-<Screenshot3.png, id=624, 1371.1225pt x 770.88pt>
+[48] <Screenshot3.png, id=644, 1371.1225pt x 770.88pt>
 File: Screenshot3.png Graphic file (type png)
  <use Screenshot3.png>
-Package pdftex.def Info: Screenshot3.png used on input line 1104.
+Package pdftex.def Info: Screenshot3.png used on input line 1110.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1110--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1128
 
  []
 
-[44] [45 <./Screenshot3.png>]
-Overfull \hbox (7.31975pt too wide) in paragraph at lines 1134--1135
+[49 <./Screenshot3.png>]
+Overfull \hbox (7.31975pt too wide) in paragraph at lines 1140--1141
 []\T1/ptm/m/n/12 (-20) This script slave_feat.pl will com-pute, for each train-
 ing ut-ter-ance, a se-quence of 13-dimensional
  []
 
-<Screenshot4.png, id=633, 1371.1225pt x 770.88pt>
+[50] <Screenshot4.png, id=654, 1371.1225pt x 770.88pt>
 File: Screenshot4.png Graphic file (type png)
  <use Screenshot4.png>
-Package pdftex.def Info: Screenshot4.png used on input line 1145.
+Package pdftex.def Info: Screenshot4.png used on input line 1151.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+Underfull \hbox (badness 10000) in paragraph at lines 1157--1158
 
  []
 
-[46 <./Screenshot4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
+[51 <./Screenshot4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1177
 
  []
 
-<Screenshot5.png, id=638, 1371.1225pt x 770.88pt>
+<Screenshot5.png, id=659, 1371.1225pt x 770.88pt>
 File: Screenshot5.png Graphic file (type png)
  <use Screenshot5.png>
-Package pdftex.def Info: Screenshot5.png used on input line 1182.
+Package pdftex.def Info: Screenshot5.png used on input line 1188.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Screenshot6.png, id=639, 1371.1225pt x 770.88pt>
+<Screenshot6.png, id=660, 1371.1225pt x 770.88pt>
 File: Screenshot6.png Graphic file (type png)
  <use Screenshot6.png>
-Package pdftex.def Info: Screenshot6.png used on input line 1189.
+Package pdftex.def Info: Screenshot6.png used on input line 1195.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47] [48 <./Screenshot5.png> <./Screenshot6.png>] [49
+[52 <./Screenshot5.png>] [53 <./Screenshot6.png>] [54
 
-]
+] [55]
 bibitemlist
-[50
+[56
 
-] [51]
+] [57]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1641,27 +1642,27 @@ bibitemlist
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1376.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1376.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1382.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1382.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1376.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1376.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1382.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 661D2EA9857AA2FEF66F20F567402702;5367.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1376.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1382.
  ) 
 Here is how much of TeX's memory you used:
- 17667 strings out of 493029
- 274416 string characters out of 6136234
+ 17673 strings out of 493029
+ 274458 string characters out of 6136234
  764215 words of memory out of 5000000
  20662 multiletter control sequences out of 15000+600000
  48631 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,12n,39p,1805b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,39p,1957b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1669,10 +1670,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (51 pages, 1230879 bytes).
+Output written on thesis.pdf (57 pages, 1234715 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 680 compressed objects within 7 object streams
- 185 named destinations out of 1000 (max. 500000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 700 compressed objects within 7 object streams
+ 191 named destinations out of 1000 (max. 500000)
  19101 words of extra memory for PDF output out of 20736 (max. 10000000)
 
