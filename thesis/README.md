@@ -1,2 +1,2 @@
-# thesis-book
-# thesis-final
+# thesis
+# 
