@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  29 AUG 2017 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  30 AUG 2017 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1329,309 +1329,350 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
  [11
 
 
-] [12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+] [12] [13] [14] [15]
+Overfull \hbox (1.73946pt too wide) in paragraph at lines 300--301
+[] \T1/ptm/b/n/12 Max-i-mum En-tropy Markov Model: \T1/ptm/m/n/12 (-20) Max-Ent
+ stands for Max-i-mum En-tropy Markov
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
-[16] <waveform.png, id=484, 704.6325pt x 200.75pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
+
+ []
+
+[17] <waveform.png, id=498, 704.6325pt x 200.75pt>
 File: waveform.png Graphic file (type png)
  <use waveform.png>
-Package pdftex.def Info: waveform.png used on input line 345.
+Package pdftex.def Info: waveform.png used on input line 363.
 (pdftex.def)             Requested size: 352.3154pt x 100.37474pt.
- [17
+ [18
 
- <./waveform.png>] [18]
-<sphinx4_architecture.png, id=495, 363.90071pt x 233.61697pt>
+ <./waveform.png>] [19]
+<sphinx4_architecture.png, id=510, 363.90071pt x 233.61697pt>
 File: sphinx4_architecture.png Graphic file (type png)
 
 <use sphinx4_architecture.png>
-Package pdftex.def Info: sphinx4_architecture.png used on input line 386.
+Package pdftex.def Info: sphinx4_architecture.png used on input line 404.
 (pdftex.def)             Requested size: 363.89981pt x 233.6164pt.
- [19 <./sphinx4_architecture.png>] [20]
-<400px-Mfcc_fig5.png, id=505, 307.53192pt x 214.50351pt>
+ [20 <./sphinx4_architecture.png>] [21]
+<400px-Mfcc_fig5.png, id=519, 307.53192pt x 214.50351pt>
 File: 400px-Mfcc_fig5.png Graphic file (type png)
 
 <use 400px-Mfcc_fig5.png>
-Package pdftex.def Info: 400px-Mfcc_fig5.png used on input line 420.
+Package pdftex.def Info: 400px-Mfcc_fig5.png used on input line 438.
 (pdftex.def)             Requested size: 307.53116pt x 214.50298pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (8.60364pt too wide) in paragraph at lines 429--430
+Overfull \hbox (8.60364pt too wide) in paragraph at lines 447--448
 []\T1/ptm/m/n/12 (-20) Systems like the Voice Recog-ni-tion Call Pro-cess-ing (
 VRCP)
  []
 
-[21] [22 <./400px-Mfcc_fig5.png>]
-Overfull \hbox (1.13583pt too wide) in paragraph at lines 435--436
+[22] [23 <./400px-Mfcc_fig5.png>]
+Overfull \hbox (1.13583pt too wide) in paragraph at lines 453--454
 []\T1/ptm/m/n/12 (-20) This sys-tem was cre-ated by NYNEX:, Bell-core, and Amer
 itech
  []
 
-[23] [24] [25
+[24] [25] [26
 
-] [26] [27] [28] [29] [30] [31
+] [27] [28] [29] [30] [31] [32
 
 ]
-<tmp725d99_thumb.png, id=553, 642.4pt x 344.28625pt>
+<tmp725d99_thumb.png, id=567, 642.4pt x 344.28625pt>
 File: tmp725d99_thumb.png Graphic file (type png)
  <use tmp725d99_thumb.png>
-Package pdftex.def Info: tmp725d99_thumb.png used on input line 740.
+Package pdftex.def Info: tmp725d99_thumb.png used on input line 758.
 (pdftex.def)             Requested size: 321.19922pt x 172.1427pt.
 
-<mdt_recognizer.png, id=554, 569.12625pt x 302.12875pt>
+<mdt_recognizer.png, id=568, 569.12625pt x 302.12875pt>
 File: mdt_recognizer.png Graphic file (type png)
 
 <use mdt_recognizer.png>
-Package pdftex.def Info: mdt_recognizer.png used on input line 748.
+Package pdftex.def Info: mdt_recognizer.png used on input line 766.
 (pdftex.def)             Requested size: 284.56242pt x 151.064pt.
- [32 <./tmp725d99_thumb.png> <./mdt_recognizer.png>]
-[33
+ [33 <./tmp725d99_thumb.png> <./mdt_recognizer.png>]
+[34
 
-] [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 852--854
+] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 870--872
 
  []
 
-<networknuts-linux-fun.png, id=573, 728.7225pt x 460.72125pt>
+<networknuts-linux-fun.png, id=587, 728.7225pt x 460.72125pt>
 File: networknuts-linux-fun.png Graphic file (type png)
 
 <use networknuts-linux-fun.png>
-Package pdftex.def Info: networknuts-linux-fun.png used on input line 857.
+Package pdftex.def Info: networknuts-linux-fun.png used on input line 875.
 (pdftex.def)             Requested size: 400.79861pt x 253.39746pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36] <Screenshot1.png, id=589, 1371.1225pt x 770.88pt>
+[37] <Screenshot1.png, id=604, 1371.1225pt x 770.88pt>
 File: Screenshot1.png Graphic file (type png)
  <use Screenshot1.png>
-Package pdftex.def Info: Screenshot1.png used on input line 872.
+Package pdftex.def Info: Screenshot1.png used on input line 890.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--884
+Underfull \hbox (badness 10000) in paragraph at lines 898--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--884
+Underfull \hbox (badness 10000) in paragraph at lines 898--902
 
  []
 
-[37 <./networknuts-linux-fun.png>] [38 <./Screenshot1.png>]
-<Screenshot2.png, id=601, 500.87125pt x 271.0125pt>
+[38 <./networknuts-linux-fun.png>] [39 <./Screenshot1.png>]
+<Screenshot2.png, id=615, 500.87125pt x 271.0125pt>
 File: Screenshot2.png Graphic file (type png)
  <use Screenshot2.png>
-Package pdftex.def Info: Screenshot2.png used on input line 894.
+Package pdftex.def Info: Screenshot2.png used on input line 912.
 (pdftex.def)             Requested size: 500.87001pt x 271.01183pt.
 
-Overfull \hbox (45.62589pt too wide) in paragraph at lines 894--895
+Overfull \hbox (45.62589pt too wide) in paragraph at lines 912--913
  [][] 
  []
 
-[39 <./Screenshot2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
+[40 <./Screenshot2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--945
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 977--984
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--1002
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
-[]|\T1/ptm/m/n/12 (+20) Tidigits Dig-its
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
+
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 1058--1059
-[]|\T1/ptm/m/n/12 (+20) RM1 Com-mand
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 1060--1061
-[]|\T1/ptm/m/n/12 (+20) WSJ1 5k Small
- []
-
-
-Underfull \hbox (badness 5954) in paragraph at lines 1062--1063
-[]|\T1/ptm/m/n/12 (+20) WSJ1 20k Big
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1056
 
  []
 
 [44]
-Overfull \hbox (11.1825pt too wide) in paragraph at lines 1097--1109
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
+[]|\T1/ptm/m/n/12 (+20) Tidigits Dig-its
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 1076--1077
+[]|\T1/ptm/m/n/12 (+20) RM1 Com-mand
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 1078--1079
+[]|\T1/ptm/m/n/12 (+20) WSJ1 5k Small
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 1080--1081
+[]|\T1/ptm/m/n/12 (+20) WSJ1 20k Big
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1105
+
+ []
+
+[45]
+Overfull \hbox (11.1825pt too wide) in paragraph at lines 1115--1127
 \T1/ptm/m/it/12 (-20) $DEC_CFG_LISTOFFILES = "$DEC_CFG_BASE_DIR/etc/$DEC_CFG_DB
 _NAME_test.fileids";
  []
 
-<Screenshot3.png, id=633, 1371.1225pt x 770.88pt>
+<Screenshot3.png, id=647, 1371.1225pt x 770.88pt>
 File: Screenshot3.png Graphic file (type png)
  <use Screenshot3.png>
-Package pdftex.def Info: Screenshot3.png used on input line 1125.
+Package pdftex.def Info: Screenshot3.png used on input line 1143.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1143
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1161
 
  []
 
-[45] [46 <./Screenshot3.png>]
-Overfull \hbox (7.31975pt too wide) in paragraph at lines 1155--1156
+[46] [47 <./Screenshot3.png>]
+Overfull \hbox (7.31975pt too wide) in paragraph at lines 1173--1174
 []\T1/ptm/m/n/12 (-20) This script slave_feat.pl will com-pute, for each train-
 ing ut-ter-ance, a se-quence of 13-dimensional
  []
 
-<Screenshot4.png, id=642, 1371.1225pt x 770.88pt>
+<Screenshot4.png, id=656, 1371.1225pt x 770.88pt>
 File: Screenshot4.png Graphic file (type png)
  <use Screenshot4.png>
-Package pdftex.def Info: Screenshot4.png used on input line 1166.
+Package pdftex.def Info: Screenshot4.png used on input line 1184.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1172--1173
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
 
  []
 
-[47 <./Screenshot4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+[48 <./Screenshot4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
 
  []
 
-<Screenshot5.png, id=647, 1371.1225pt x 770.88pt>
+<Screenshot5.png, id=661, 1371.1225pt x 770.88pt>
 File: Screenshot5.png Graphic file (type png)
  <use Screenshot5.png>
-Package pdftex.def Info: Screenshot5.png used on input line 1203.
+Package pdftex.def Info: Screenshot5.png used on input line 1221.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Screenshot6.png, id=648, 1371.1225pt x 770.88pt>
+<Screenshot6.png, id=662, 1371.1225pt x 770.88pt>
 File: Screenshot6.png Graphic file (type png)
  <use Screenshot6.png>
-Package pdftex.def Info: Screenshot6.png used on input line 1210.
+Package pdftex.def Info: Screenshot6.png used on input line 1228.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48] [49 <./Screenshot5.png> <./Screenshot6.png>] [50
+[49] [50 <./Screenshot5.png> <./Screenshot6.png>] [51
 
 ]
 bibitemlist
-[51
+[52
 
-] [52]
+] [53]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1641,24 +1682,31 @@ bibitemlist
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1397.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1415.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1415.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1397.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1415.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1415.
 
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 12C901176C52DD56279C1FE0FF19F561;5350.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: DDAAB460E1949D352C27F76EF017CA9D;5494
+(rerunfilecheck)             After:  487A01E5CC42F7CCDC4B909681008845;5563.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1397.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1415.
  ) 
 Here is how much of TeX's memory you used:
- 17673 strings out of 493029
- 274458 string characters out of 6136234
+ 17678 strings out of 493029
+ 274517 string characters out of 6136234
  764215 words of memory out of 5000000
- 20662 multiletter control sequences out of 15000+600000
+ 20664 multiletter control sequences out of 15000+600000
  48631 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,12n,39p,2078b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1669,10 +1717,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (52 pages, 1234371 bytes).
+Output written on thesis.pdf (53 pages, 1239055 bytes).
 PDF statistics:
- 772 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 191 named destinations out of 1000 (max. 500000)
- 19101 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 703 compressed objects within 8 object streams
+ 194 named destinations out of 1000 (max. 500000)
+ 19117 words of extra memory for PDF output out of 20736 (max. 10000000)
 

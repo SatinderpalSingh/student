@@ -290,37 +290,55 @@ On the basis of level rule divided as lexical rules act in a word level, each se
 
 The main drawback of rule based system is that it fails when the text is not present in lexicon. Therefore the rule based system cannot predict the appropriate tags. 
 
-  \item
-  \item
-  \item
-  \item
+  \item \textbf{Statistical Approach / Stochastic Tagger:} A stochastic approach assign a tag to word using i frequency, probability or statistics. From the annotated training data it “selects the most likely tag for the word” and uses same information to tag that word in the unannotated text (Bagul P. et al., 2014). Stochastic tagger as a simple generalization of the stochastic taggers generally resolves the ambiguity by computing the probability of a given word (or the tag).
+The drawbacks of this approach are that it can come up with sequences of tags for sentences that are not acceptable according to the grammar rules. So, it determines the best tag for a word by calculating the probability of previous tags on n value, where the value of n is set to 1, 2 or 3 are known as the Unigram, Bigram and Trigram models.
+ 
+
+\begin{itemize}
+  \item[$\bullet$]\textbf{Hidden Markov Model:} HMM stands for Hidden Markov Model. HMM is a generative model. The model assigns the joint probability to paired observation and label sequence. Then the parameters are trained to maximize the joint likelihood of training sets .It is advantageous as its basic theory is elegant and easy to understand. Hence it is easier to implement and analyze. It uses only positive data, so they can be easily scaled. It has few disadvantages. In order to define joint probability over observation and label sequence HMM needs to enumerate all possible observation sequence. Hence it makes various assumptions about data like Markovian assumption i.e. current label depends only on the previous label. Also it is not practical to represent multiple overlapping features and long term dependencies. Number of parameter to be evaluated is huge. So it needs a large data set for training (Bagul P. et al., 2014).
+
+  \item[$\bullet$] \textbf{ Maximum Entropy Markov Model:} MaxEnt stands for Maximum Entropy Markov Model (MEMM). It is a conditional probabilistic sequence model. It can represent multiple features of a word and can also handle long term dependency. It is based on the principle of maximum entropy which states that the least biased model which considers all known facts is the one which maximizes entropy. Each source state has an exponential model that takes the observation feature as input and output a distribution over possible next state. Output labels are associated with states.
+
+The large dependency problem of HMM is resolved by this model. Also, it has higher recall and precision as compared to HMM. The disadvantage of this approach is the label bias problem. The probabilities of transition from a particular state must sum to one. MEMM favors those states through which less number of transitions occurs (Mohnot K \& Singh S P, 2014).
+
+  \item[$\bullet$] \textbf{Conditional Random Field Model:} CRF stands for Conditional Random Field. It is a type of discriminative probabilistic model. It has all the advantages of MEMMs without the label bias problem. CRFs are undirected graphical models (also know as random field) which is used to calculate the conditional probability of values on assigned output nodes given the values assigned to other assigned input nodes.
+\end{itemize}
+
+  \item \textbf{Hybrid Approach:} This approach combines the advantages of both of the above approaches namely rule based approach and stochastic approach. Words in this technique are first tagged probabilistically and then as post processing, linguistic rules are applied to tag tokens. Accuracy of taggers based on this approach generally gives good results than other techniques (Mehta, D. N, 2015).
+  \item \textbf{Neural Tagger:} Neural taggers are based on neural networks which learn the parameters of POS tagger from a representative training data set. The MLP-tagger is trained with error back-propagation learning algorithm. The performance has shown better than stochastic method (Raju, S. B., 2002).
+
 \end{enumerate}
 
+\section{Applications of POS tagger} The POS tagger can be used as a preprocessor. Text indexing and retrieval uses POS information. Speech processing uses POS tags to decide the pronunciation. POS tagger is used for making tagged corpora. 
+
+\section{Features for POS Tagging}
+The Following features have been found to be very useful in POS tagging: \\
+
+\textbf{Suffixes} The next word of Current token is used as feature.\\
+
+\textbf{Prefixes} The previous word of Current token is used as feature.\\
+
+\textbf{Context Pattern based Features} Context patterns are helpful for POS tagging. Eg. Word prefixes and suffix context patterns. \\
+
+\textbf{Word length} Length of particular word is useful feature. \\
+
+\textbf{Static Word Feature} The previous and next words of a particular word are used as features.\\
+
+\textbf{Presence of Special characters} Presence Special characters surrounding the current word are used as features.\\
 
 
+\section{Organization of Thesis}
+The structure of the rest of the Thesis is as follows:
+
+\textbf{Chapter 2}, presents the background of various POS tagging approaches  for various languages and it covers the detail about. It also includes literature review of study. \\
+
+\textbf{Chapter 3}, Tells about the present work, methodology in detail. It explains the algorithm and flowchart of present study.\\
 
 
+\textbf{Chapter 4}, presents the results of study and compares this with existing techniques on the basis of different output parameters.\\
 
+\textbf{Chapter 5}, contains the conclusion and future work. In the end references are marked.\\
 
-
-
-
-
-
-
-In \textbf{Chapter 2}, we need to have introduction of fundamentals of Speech recognition and Dictation and its challenges. Also characteristics, advantages of Speech-to-Text are discussed. Dictation performance and issues are described. Then CMUSphinx, Hidden Markov's Model are described.\\
-
-In \textbf{Chapter 3}, we cover the literature review of our topic.\\
-
-
-In \textbf{Chapter 4}, we cover the proposed scheme of our topic which includes motivation and basic design of our that are related to our topic.\\
-
-
-In \textbf{Chapter 5}, we deal with experimental results and analysis of our work. This section describes the tools and platform used in our project.
-The tool used in our project is CMULTK and plate form used is Linux and operating system is UBUNTU 14.04.\\
-
-
-In \textbf{Chapter 6}, covers the conclusion by us. At last we have shown different references including research papers, websites and books which we have gone through during my projects. 
 
 
 
