@@ -450,70 +450,49 @@ A Sinhala language based Part of Speech (POS) Tagger using lexical semantics and
 
 
 \chapter{PRESENT WORK}
-\section{Motivation}
-Speech is the most common mode of communication among human beings. Speech
-offers a new way of interfacing with a computer that lends itself very well to solving
-the problems of field-based computing. It's natural and intuitive. 
+This chapter provides statement of the problem undertaken for the research work carried out with the objective on which this research study is based upon justify the need for the proposed methodology. This chapter also includes steps taken for implementing the research methodology and flow chart depicting the research process.
+\section{Problem Formulation}
+In Natural Language Processing (NLP), many researchers have done work on Part-of-Speech (POS) taggers for different languages texts using various methods. Taggers with more than 95\% word-level accuracy have been developed for English, German and other European Languages, for which large labeled data is available.  Due to lack of a large annotated corpus limited work has been done for Indian languages. Very little work has been done previously on POS tagging of Hindi. As Hindi is the official language of India. About 182 million people speak Hindi as their native language and many others speak Hindi as a second language-some estimates say that around 350 million people speak Hindi. Hindi is a morphologically rich language. 
 
-Before we take a look at what this technology is all about and how it works, we
-should make a note of the fast pace at which interactive speech technologies have
-been coming into the market of late. Whenever a person has to use the PC for typing a
-document on any word processing software, he/she has to slog hard and spend his
-valuable time in the dull and boring job of typing the document. Time is wasted,
-firstly because the typing speed does not match the speed with which a person can
-think, speak or hear.
+The previous study shows that POS tagger plays an important role to create NLP based applications but the problem is to assign exact POS tagger to each word of sentence due to morphological richness of languages. However many researchers worked in this field but its still challenge to achieve best results. In this study we will try to evaluate the performance of POS tagger for Hindi Language using Apache open NLP that supports many NLP applications and we expect it will increase overall performance of the system.\\
+  
+\section{Objectives}
 
-In today’s fast paced
-world where every human being has to combat a race against time a direct interface
-between the spoken word and Pc users will gleefully accept the same words
-spontaneously typed on the PC screen with minimum lapse of time. These
-technologies are getting easier to work with too. In the future, speech will definitely
-be the standard input mode that most of us will replace the traditional keyboard and
-mouse as the standard input device [19].
-
-The 1990s saw the first commercialization of spoken language understanding
-systems. Computers can now understand and react to humans speaking in a natural
-manner in ordinary languages within a limited domain. Basic and applied research in
-signal processing, computational linguistics and artificial intelligence have been
-combined to open up new possibilities in human-computer interfaces [21].
-
-So all this benifits motivates me to produce a dictation system for our motheer tongue "Punjabi" language. People from different social and economic backgrounds speak with different different dialects.Computers can now understand and react to humans speaking in a natural
-manner in ordinary languages within a limited domain. Basic and applied research in
-signal processing, computational linguistics and artificial intelligence have been
-combined to open up new possibilities in human-computer interfaces.
-
-\newpage
-
-\section{System Framework}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{tmp725d99_thumb}
-%    \caption{Sphinx Architecture}
-%    \label{fig:mesh1}
-\end{figure}
+\begin{itemize}
+  \item[$\bullet$]The main objectives of this study are following:
+  \item[$\bullet$]To study and analyze POS taggers for different languages.
+  \item[$\bullet$]To increase POS taggers for Hindi language similar to foreign language.
+  \item[$\bullet$]To implement such taggers on different platform.
+  \item[$\bullet$]To compare the results of existing and new developed POS taggers.
+\end{itemize}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{mdt_recognizer}
-    \caption{System Framework}
+    \includegraphics[scale=1.0]{jagjit}
+    \caption{Flowchart of POS tagging for Hindi Language}
 %    \label{fig:mesh1}
 \end{figure}
+
+Figure 3.1 describes that firstly a sentence is chosen and tokens are assigned to each word of sentence. After that POS tagging of tokens starts by assigning automatic descriptors to tokens. The next step of this process is to identify the sense of words which are tokenized. Sentiwordnet assigns scores to each synset of WordNet three sentiment scores: positivity, negativity, objectivity. According to scores words are classified into taggers.
+
+
 
 %=====================================================================================================================================================
-\chapter{EXPERIMENTAL RESULTS AND ANALYSIS}
+\chapter{EXPERIMENTAL RESULTS}
 \section{Platform}
-\subsection{Operating System is Ubuntu 14.04}
+\subsection{Operating System is Ubuntu 16.04}
 Ubuntu is a Debian-based Linux operating system, with Unity as its default desktop environment. It is based on free software and named after the Southern African philosophy of ubuntu (literally, "human-ness"), which often is translated as "humanity towards others" or "the belief in a universal bond of sharing that connects all humanity".
 
-Development of Ubuntu is led by UK-based Canonical Ltd. a company owned by South African entrepreneur Mark Shuttleworth. Canonical generates revenue through the sale of technical support and other services related to Ubuntu. The Ubuntu project is publicly committed to the principles of open-source software development; people are encouraged to use free software, study how it works, improve upon it, and distribute it [24].
+Development of Ubuntu is led by UK-based Canonical Ltd. a company owned by South African entrepreneur Mark Shuttleworth. Canonical generates revenue through the sale of technical support and other services related to Ubuntu. The Ubuntu project is publicly committed to the principles of open-source software development; people are encouraged to use free software, study how it works, improve upon it, and distribute it.\\
 \subsection{Bison}
 Bison is a general-purpose parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables. As an experimental feature, Bison can also generate IELR(1) or canonical LR(1) parser tables. Once you are proficient with Bison, you can use it to develop a wide range of language parsers, from those used in simple desk calculators to complex programming languages.
 
-Bison is upward compatible with Yacc: all properly-written Yacc grammars ought to work with Bison with no change. Anyone familiar with Yacc should be able to use Bison with little trouble. You need to be fluent in C or C++ programming in order to use Bison. Java is also supported as an experimental feature [25].
+Bison is upward compatible with Yacc: all properly-written Yacc grammars ought to work with Bison with no change. Anyone familiar with Yacc should be able to use Bison with little trouble. You need to be fluent in C or C++ programming in order to use Bison. Java is also supported as an experimental feature.\\
+
 \subsection{Swig}
-To help build extension modules, SWIG is packaged with a library of support files that you can include in your own interfaces. These files often define new SWIG directives or provide utility functions that can be used to access parts of the standard C and C++ libraries. This chapter provides a reference to the current set of supported library files [26].
+To help build extension modules, SWIG is packaged with a library of support files that you can include in your own interfaces. These files often define new SWIG directives or provide utility functions that can be used to access parts of the standard C and C++ libraries. This chapter provides a reference to the current set of supported library files.\\
+
 \subsection{Gstreamer} 
 GStreamer is a pipeline-based multimedia framework written in the C programming language with the type system based on GObject.
 
@@ -521,38 +500,34 @@ GStreamer allows a programmer to create a variety of media-handling components, 
 
 It is designed to work on a variety of operating systems, e.g. Linux kernel-based operating systems, the BSDs, OpenSolaris, Android, OS X, iOS, Windows, OS/400.
 
-GStreamer is free and open-source software subject to the terms of the GNU Lesser General Public License (LGPL) and is being hosted at freedesktop.org [27].
+GStreamer is free and open-source software subject to the terms of the GNU Lesser General Public License (LGPL) and is being hosted at freedesktop.org.
  	
 GStreamer has been ported to a wide range of operating systems, processors and compilers. These include but are not limited to Linux on x86, PPC and ARM using GCC. Solaris on x86 and SPARC using both GCC and Forte, MacOSX, Microsoft Windows using MS Visual Developer, IBM OS/400 and Symbian OS.
 
-GStreamer can bridge to other multimedia frameworks in order to reuse existing components (e.g. codecs) and use platform input/output mechanism [28].
+GStreamer can bridge to other multimedia frameworks in order to reuse existing components (e.g. codecs) and use platform input/output mechanism.\\
 
 \subsection{Gcc}
 GCC was originally written as the compiler for the GNU operating system. The GNU system was developed to be 100 percent free software, free in the sense that it respects the user's freedom.
 
-We strive to provide regular, high quality releases, which we want to work well on a variety of native and cross targets (including GNU/Linux), and encourage everyone to contribute changes or help testing GCC. Our sources are readily and freely available via SVN and weekly snapshots [27].
+We strive to provide regular, high quality releases, which we want to work well on a variety of native and cross targets (including GNU/Linux), and encourage everyone to contribute changes or help testing GCC. Our sources are readily and freely available via SVN and weekly snapshots.\\
 
 \subsection{Automake} 
-Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards. Automake requires the use of Autoconf [31]. The Automake manual can be read on-line or downloaded in PDF format; also, more formats are offered for download or on-line reading. If you have installed Automake on your system, you may also find more information about it by looking at your local documentation; for example you might use info automake at the shell prompt [27]. 
+Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards. Automake requires the use of Autoconf [31]. The Automake manual can be read on-line or downloaded in PDF format; also, more formats are offered for download or on-line reading. If you have installed Automake on your system, you may also find more information about it by looking at your local documentation; for example you might use info automake at the shell prompt. \\
  
 \subsection{Autoconf}
-Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the packages to many kinds of UNIX-like systems without manual user intervention. Autoconf creates a configuration script for a package from a template file that lists the operating system features that the package can use, in the form of M4 macro calls [28].
+Autoconf is an extensible package of M4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the packages to many kinds of UNIX-like systems without manual user intervention. Autoconf creates a configuration script for a package from a template file that lists the operating system features that the package can use, in the form of M4 macro calls.\\
 
 \subsection{Libtool}
  GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries behind a consistent, portable interface.
 
-To use libtool, add the new generic library building commands to your Makefile, Makefile.in, or Makefile.am [28].
+To use libtool, add the new generic library building commands to your Makefile, Makefile.in, or Makefile.am.\\
 
-
-
-
-\section{Speech Recognition Engine}
 \subsection{Library}
 \subsubsection{Sphinxbase}
 This package contains the basic libraries shared by the CMU Sphinx
 trainer and all the Sphinx decoders (Sphinx-II, Sphinx-III, and
 PocketSphinx), as well as some common utilities for manipulating
-acoustic feature and audio files.
+acoustic featurs.
 
 Sphinxbase uses the standard unix autogen system, and there's a script
 included, 'build for iphone.sh' that will setup configure to create
@@ -563,22 +538,28 @@ binaries that are XCode friendly.
 \subsubsection{Python-dev}
 Header files, a static library and development tools for building
  Python modules, extending the Python interpreter or embedding Python
- in applications [20].
+ in applications.
 
 \subsection{Decoder}
 \subsubsection{PocketSphinx}
- PocketSphinx is CMU’s fastest speech recognition system. It’s a library written in pure C which is optimal for development of your C applications as well as for development of language bindings. At real time speed it’s the most accurate engine, and therefore it is a good choice for live applications.
+ PocketSphinx is CMU’s fastest tagging system. It’s a library written in pure C which is optimal for development of your C applications as well as for development of language bindings. At real time speed it’s the most accurate engine, and therefore it is a good choice for live applications.
 
 It's good for desktop applications, command and control and dictation where fast response and low resource consumption are the goals.
 
-Also it includes support for embedded devices with fixed-point ariphmetics and is successfully used on IPhone, Nokia devices and on Windows Mobile. You can find further documentation about PocketSphinx in the release documentation, or at the online  documentation [29]. 
+Also it includes support for embedded devices with fixed-point ariphmetics and is successfully used on IPhone, Nokia devices and on Windows Mobile. You can find further documentation about PocketSphinx in the release documentation, or at the online  documentation. 
 
 \subsubsection{Sphinx-4}
-Sphinx-4 is a state-of-the-art speech recognition system written entirely in the Java™ programming language. It's best for implementation of complex server or cloud-based system with deep interaction with NLP modules, web services and cloud computing [29].
+Sphinx-4 is a state-of-the-art part of speech tagging system written entirely in the Java™ programming language. It's best for implementation of complex server or cloud-based system with deep interaction with NLP modules, web services and cloud computing.
 
 \subsection{Trainer}
 \subsubsection{SphinxTrain}
- New openfst-based G2P trainer and decoder, supported by Sphinx4 too. It includes Parallel feature extraction.  Package can be installed now just like any application. Single 'sphinxtrain' command to access all training process. Increased reuse of sphinxbase functions [30].
+ New openfst-based G2P trainer and decoder, supported by Sphinx4 too. It includes Parallel feature extraction.  Package can be installed now just like any application. Single 'sphinxtrain' command to access all training process. Increased reuse of sphinxbase functions.
+
+\section{Shells and GUIs}
+Linux supports two forms of command input: through textual command line shells similar to those found on most Linux systems (e.g. sh - the Bourne shell, bash - the Bourne again shell and csh - the C shell) and through graphical interfaces (GUIs) such as the KDE and GNOME window managers. If you are connecting remotely to a server your access will typically be through a command line shell.\\
+
+
+
 
 \subsection{Experimental Setup}
 
@@ -596,8 +577,8 @@ Sphinx-4 is a state-of-the-art speech recognition system written entirely in the
   \item Download SphinxTrain-5prealpha and compile it and then install from the source	
 \end{enumerate}
 
-\section{Dictation System Setup}
-Dictation system setup includes the making of Acoustic model and Language model for the Punjabi language. Also the use of CMULTK and testing on the PocketSphinx decoder.
+\section{Part of Speech Tagging system setup}
+Dictation system setup includes the making of Acoustic model and Language model for the hindi language. Also the use of CMULTK and testing on the PocketSphinx decoder.
 
 \subsection{Testing the Decoder}
 Before proceeding further it is important to check the existing decoder for the existing language model, so i test it with the exixting English model.
@@ -605,7 +586,7 @@ So i used Ubuntu terminal for this purpose.\\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.55]{networknuts-linux-fun}
+    \includegraphics[scale=0.3]{Screenshot1}
     \caption{Ubuntu Terminal}
 %    \label{fig:mesh1}
 \end{figure}
@@ -616,12 +597,12 @@ The sphinxbase will be installed in /usr/local/ folder by default. Not every sys
 \textit{export PKG\_CONFIG\_PATH=/usr/local/lib/pkgconfig}
 
 
-To test installation, run 'pocketsphinx\_continuous -inmic yes' and check that it recognizes words you are saying to the microphone. 
+To test installation, run 'pocketsphinx\_continuous -inmic yes' and check that it initialize the tagger. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Screenshot1}
-    \caption{PocketSphinx Test}
+    \includegraphics[scale=0.3]{jagjit1}
+    \caption{Experimental setup of Linux for Hindi POS taggers}
 %    \label{fig:mesh1}
 \end{figure}
 

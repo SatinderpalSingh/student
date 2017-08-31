@@ -17,11 +17,11 @@
 \BOOKMARK [1][-]{section.2.1}{Literature Review}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.1.1}{A glance over Related Literature}{section.2.1}% 18
 \BOOKMARK [0][-]{chapter.3}{PRESENT WORK}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Motivation}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{System Framework}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{EXPERIMENTAL RESULTS AND ANALYSIS}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Objectives}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{EXPERIMENTAL RESULTS}{}% 22
 \BOOKMARK [1][-]{section.4.1}{Platform}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.1.1}{Operating System is Ubuntu 14.04}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{Operating System is Ubuntu 16.04}{section.4.1}% 24
 \BOOKMARK [2][-]{subsection.4.1.2}{Bison}{section.4.1}% 25
 \BOOKMARK [2][-]{subsection.4.1.3}{Swig}{section.4.1}% 26
 \BOOKMARK [2][-]{subsection.4.1.4}{Gstreamer}{section.4.1}% 27
@@ -29,17 +29,17 @@
 \BOOKMARK [2][-]{subsection.4.1.6}{Automake}{section.4.1}% 29
 \BOOKMARK [2][-]{subsection.4.1.7}{Autoconf}{section.4.1}% 30
 \BOOKMARK [2][-]{subsection.4.1.8}{Libtool}{section.4.1}% 31
-\BOOKMARK [1][-]{section.4.2}{Speech Recognition Engine}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.2.1}{Library}{section.4.2}% 33
-\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Sphinxbase}{subsection.4.2.1}% 34
-\BOOKMARK [3][-]{subsubsection.4.2.1.2}{Python-dev}{subsection.4.2.1}% 35
-\BOOKMARK [2][-]{subsection.4.2.2}{Decoder}{section.4.2}% 36
-\BOOKMARK [3][-]{subsubsection.4.2.2.1}{PocketSphinx}{subsection.4.2.2}% 37
-\BOOKMARK [3][-]{subsubsection.4.2.2.2}{Sphinx-4}{subsection.4.2.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.3}{Trainer}{section.4.2}% 39
-\BOOKMARK [3][-]{subsubsection.4.2.3.1}{SphinxTrain}{subsection.4.2.3}% 40
-\BOOKMARK [2][-]{subsection.4.2.4}{Experimental Setup}{section.4.2}% 41
-\BOOKMARK [1][-]{section.4.3}{Dictation System Setup}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.1.9}{Library}{section.4.1}% 32
+\BOOKMARK [3][-]{subsubsection.4.1.9.1}{Sphinxbase}{subsection.4.1.9}% 33
+\BOOKMARK [3][-]{subsubsection.4.1.9.2}{Python-dev}{subsection.4.1.9}% 34
+\BOOKMARK [2][-]{subsection.4.1.10}{Decoder}{section.4.1}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.10.1}{PocketSphinx}{subsection.4.1.10}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.10.2}{Sphinx-4}{subsection.4.1.10}% 37
+\BOOKMARK [2][-]{subsection.4.1.11}{Trainer}{section.4.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.11.1}{SphinxTrain}{subsection.4.1.11}% 39
+\BOOKMARK [1][-]{section.4.2}{Shells and GUIs}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.2.1}{Experimental Setup}{section.4.2}% 41
+\BOOKMARK [1][-]{section.4.3}{Part of Speech Tagging system setup}{chapter.4}% 42
 \BOOKMARK [2][-]{subsection.4.3.1}{Testing the Decoder}{section.4.3}% 43
 \BOOKMARK [2][-]{subsection.4.3.2}{Building Language Model}{section.4.3}% 44
 \BOOKMARK [3][-]{subsubsection.4.3.2.1}{Text Preparation}{subsection.4.3.2}% 45
