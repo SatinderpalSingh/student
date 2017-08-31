@@ -350,124 +350,11 @@ The structure of the rest of the Thesis is as follows:
 
 
 
-
-
-
-\chapter{ CONCEPTS OF SPEECH}
-
-\section{Introduction}
-Speech is a complex phenomenon. People rarely understand how is it produced and perceived. The naive perception is often that speech is built with words, and each word consists of phones. The reality is unfortunately very different. Speech is a dynamic process without clearly distinguished parts. It's always useful to get a sound editor and look into the recording of the speech and listen to it. Here is for example the speech recording in an audio editor.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{waveform}
-    \caption{Speech Waveform}
-%    \label{fig:mesh1}
-\end{figure}
-
-All modern descriptions of speech are to some degree probabilistic. That means that there are no certain boundaries between units, or between words. Speech to text translation and other applications of speech are never 100 percent correct. That idea is rather unusual for software developers, who usually work with deterministic systems. And it creates a lot of issues specific only to speech technology [4]. 
-
-
-\subsection{Concept of Speech}
-Speech is a continuous audio stream where rather stable states mix with dynamically changed states. In this sequence of states, one can define more or less similar classes of sounds, or phones. Words are understood to be built of phones, but this is certainly not true. The acoustic properties of a waveform corresponding to a phone can vary greatly depending on many factors - phone context, speaker, style of speech and so on. The so called coarticulation makes phones sound very different from their “canonical” representation. Next, since transitions between words are more informative than stable regions, developers often talk about diphones- parts of phones between two consecutive phones. Sometimes developers talk about subphonetic units - different substates of a phone. Often three or more regions of a different nature can easily be found [5].
-
-The first part of the phone depends on its preceding phone, the middle part is stable, and the next part depends on the subsequent phone. That's why there are often three states in a phone selected for speech recognition.Sometimes phones are considered in context. Such phones in context are called triphones or even quinphones. For computational purpose it is helpful to detect parts of triphones instead of triphones as a whole, for example, to create a detector for a beginning of triphone and share it across many triphones. The whole variety of sound detectors can be represented by a small amount of distinct short sound detectors. Usually we use 4000 distinct short sound detectors to compose detectors for triphones. We call those detectors senones. 
-
-
-\subsection{Recognition Precess}
- The common way to recognize speech is the following: we take waveform, split it on utterances by silences then try to recognize what's being said in each utterance. To do that we want to take all possible combinations of words and try to match them with the audio. We choose the best matching combination. There are few important things in this match [6].
-
-First of all it's a concept of features. Since number of parameters is large, we are trying to optimize it. Numbers that are calculated from speech usually by dividing speech on frames. Then for each frame of length typically 10 milliseconds we extract 39 numbers that represent the speech. That's called eature vector. They way to generates numbers is a subject of active investigation, but in simple case it's a derivative from spectrum.
-
-Second it's a concept of the model. Model describes some mathematical object that gathers common attributes of the spoken word. In practice, for audio model of senone is gaussian mixture of it's three states - to put it simple, it's a most probable feature vector. From concept of the model the following issues raised - how good does model fits practice, can model be made better of it's internal model problems, how adaptive model is to the changed conditions.
-
-The model of speech is called Hidden Markov Model or HMM, it's a generic model that describes black-box communication channel. In this model process is described as a sequence of states which change each other with certain probability. This model is intended to describe any sequential process like speech. It has been proven to be really practical for speech decoding.
-
-Third, it's a matching process itself. Since it would take a huge time more than universe existed to compare all feature vectors with all models, the search is often optimized by many tricks. At any points we maintain best matching variants and extend them as time goes producing best matching variants for the next frame.
-
-\subsubsection{Models}
-According to the speech structure, three models are used in speech recognition to do the match:
-\begin{description}
-%  \item[$\cdot$ bla1] item 1
-  \item[$\bullet$ Acoustic Model] contains acoustic properties for each senone. There are context-independent models that contain properties (most probable feature vectors for each phone) and context-dependent ones (built from senones with context). 
-%  \item[$\ast$ bla3] item 3
-  \item[$\bullet$ Phonetic Dictionary]
-contains a mapping from words to phones. This mapping is not very effective. For example, only two to three pronunciation variants are noted in it, but it's practical enough most of the time. The dictionary is not the only variant of mapper from words to phones. It could be done with some complex function learned with a machine learning algorithm. 
-
-  \item[$\bullet$ Language Model]
-	is used to restrict word search. It defines which word could follow previously recognized words (remember that matching is a sequential process) and helps to significantly restrict the matching process by stripping words that are not probable. Most common language models used are n-gram language models-these contain statistics of word sequences-and finite state language models-these define speech sequences by finite state automation, sometimes with weights. To reach a good accuracy rate, your language model must be very successful in search space restriction. This means it should be very good at predicting the next word. A language model usually restricts the vocabulary considered to the words it contains. That's an issue for name recognition. To deal with this, a language model can contain smaller chunks like subwords or even phones. Please note that search space restriction in this case is usually worse and corresponding recognition accuracies are lower than with a word-based language model [7].
-
-\end{description}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=1.0]{sphinx4_architecture}
-    \caption{Sphinx Architecture}
-%    \label{fig:mesh1}
-\end{figure}
-
-
-Most current speech recognition systems use hidden Markov models(HMMs) to deal with the temporal variability of speech and Gaussian mixture models(GMMs) to deter- mine how well each state of each HMM fits a frame or a short window of frames of coefficients that repre- sents the acoustic input. An alternative way to evaluate the fit is to use a feed-forward neural network that takes several frames of coefficients as input and produces posterior probabilities over HMM states as output.
-
-PocketSphinx is a flexible, modular and pluggable framework to help foster new innovations in the core research of hidden Markov model(HMM) speech recognition systems. The design of PocketSphinx is based on patterns that have emerged from the design of past systems as well as new requirements based on areas that researchers currently want to explore. To exercise this framework, and to provide researchers with a “research- ready” system, Sphinx-4 also includes several implementations of both simple and state-of-the-art techniques. The framework and the implementations are all freely available via open source.
-
-PocketSphinx is a flexible, modular and pluggable framework to help foster new innovations in the core research of hidden Markov model (HMM) speech recognition systems. The design of PocketSphinx is based on patterns that have emerged from the design of past systems as well as new requirements based on areas that researchers currently want to explore. To exercise this framework, and to provide researchers with a “research- ready” system, Sphinx-4 also includes several implementations of both simple and state-of-the-art techniques. The framework and the implementations are all freely available via open source.
-
-When researchers approach the problem of core speech recognition research, they are often faced with the problem of needing to develop an entire system from scratch, even if they only want to explore one facet of the field. Open source speech recognition systems are available, such as HTK , ISIP , AVCSR  and earlier versions of the Sphinx systems. The available systems are typically optimized for a single approach to speech system design. As a result, these systems intrinsically create barriers to future research that departs from the original purpose of the system.  First and foremost, PocketSphinx is a modular and pluggable framework that incorporates design patterns from existing systems, with sufficient flexibility to support emerging areas of research interest. The framework is modular in that it comprises separable components dedicated to specific tasks, and it is pluggable in that modules can be easily replaced at run time. To exercise the framework, and to provide researchers with a working system, PocketSphinx also includes a variety of modules that implement state-of-the-art speech recognition techniques.
-
-
-\section{Advantages of Speech Recognition and Dictation systems}
-
-\begin{itemize}
-  \item[$\bullet$] Speech is a very natural way to interact, and it is not necessary to sit at a keyboard or work with a remote control.
-  \item[$\bullet$] No training required for users.
-  \item[$\bullet$] With speech recognition software, become a lot more productive – you’ll be able to get your work done much more quickly.
-  \item[$\bullet$] Most of us can dictate at least 3 times faster than we can type. 
-  \item[$\bullet$] It’s like having your own Personal Assistant available 24/7.	
-\end{itemize}
-
-\section{Principles of HMM}
-Speech recognition systems generally assume that the speech signal is a realisation of some mes-sage encoded as a sequence of one or more symbols. To effect the reverse operation of recognising the underlying symbol sequence given a spoken utterance, the continuous speech waveform is first converted to a sequence of equally spaced discrete parameter vectors. This sequence of parameter vectors is assumed to form an exact representation of the speech waveform on the basis that for the duration covered by a single vector (typically 10ms or so), the speech waveform can be regarded as being stationary. Although this is not strictly true, it is a reasonable approximation. Typical parametric representations in common use are smoothed spectra or linear prediction coefficients plus various other representations derived from these. 
-
-The role of the recogniser is to effect a mapping between sequences of speech vectors and the wanted underlying symbol sequences. Two problems make this very difficult. Firstly, the mapping from symbols to speech is not one-to-one since different underlying symbols can give rise to similar speech sounds. Furthermore, there are large variations in the realised speech waveform due to speaker variability, mood, environment, etc.  Secondly, the boundaries between symbols cannot be identified explicitly from the speech waveform. Hence, it is not possible to treat the speech waveform as a sequence of concatenated static patterns. 
-
-The second problem of not knowing the word boundary locations can be avoided by restricting the task to isolated word recognition. This implies that the speech waveform corresponds to a single underlying symbol (e.g. word) chosen from a fixed vocabulary. Despite the fact that this simpler problem is somewhat artificial, it nevertheless has a wide range of practical applications. Furthermore, it serves as a good basis for introducing the basic ideas of HMM-based recognition before dealing with the more complex continuous speech case. Hence, isolated word recognition using HMMs will be dealt with first.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=1.0]{400px-Mfcc_fig5}
-    \caption{The Markov Generation Model}
-%    \label{fig:mesh1}
-\end{figure}
-
-
-\section{Application of Speech Recognition}
-
-\begin{description}
-  \item[$\bullet$ Automation of Operator Services] Systems like the Voice Recognition Call Processing (VRCP) system introduced by AT and T or the Automated Alternate Billing System (AABS) introduced by Nortel enabled operator functions to be handled by speech recognition systems. The VRCP system handled so-called ‘operator assisted’ calls such as Collect, Third Party Billing, Person-to- Person, Operator Assisted Calling, and Calling Card calls. The AABS system automated the acceptance (or rejection) of billing charges for reverse calls by recognizing simple variants of the two word vocabulary Yes and No.
-  \item[$\bullet$ Automation of Directory Assistance]  Systems were created for assisting operators with the task of determining telephone numbers in response to customer queries by voice. Both NYNEX and Nortel introduced a system that did front end city name recognition so as to reduce the operator search space for the desired listing, and several experimental systems were created to complete the directory assistance task by attempting to recognize individual names in a directory of as many as 1 million names. Such systems are not yet practical (because of the confusability among names) but for small directories, such systems have been widely used (e.g. in corporate environments).
-  \item[$\bullet$ Voice Dialing] Systems have been created for voice dialing by name (so- called alias dialing such as Call Home, Call Office) from AT and T, NYNEX, and Bell Atlantic, and by number (ATandT SDN/NRA) to enable customers to complete calls without having to push buttons associated with the telephone number being called.
-  \item[$\bullet$ Voice Banking Services] A system for providing access to customer accounts, account balances, customer transactions, etc. was first created in Japan by NTT (the ANSER System) more than 10 years ago in order to provide a service that was previously unavailable. Equivalent services have been introduced in banks worldwide over the last several years. 
-  \item[$\bullet$ Voice Prompter]A system for providing voice replacement of touch-tone input for so-called Interactive Voice Response (IVR) systems was introduced by AT and T in the early 1990’s (initially in Spain because of the lack of touch- tone phones in that country). This system initially enabled the customer to speak the touch-tone position (i.e. speak or press the digit one); over time systems have evolved so that customers can speak the service associated with the touch-tone position (e.g. say reservations or push the 1-key, say schedule or push the 2-key, etc. 
-  \item[$\bullet$ Directory Assistance Call Completion] This system was introduced by both AT and T and NYNEX to handle completion of calls made via requests for Directory Assistance. Since Directory Assistance numbers are provided by an independent system, using Text-to-Speech synthesis to speak out the listing, speech recognition can be used to reliably recognize the listing and dial the associated number. This highly unusual use of a speech recognizer to interface with a speech synthesizer is one of the unusual outgrowths of the fractionation of the telephone network into local and long distance carriers in the United State.
-  \item[$\bullet$ Reverse Directory Assistance] This system was created by NYNEX:, Bellcore, and Ameritech to provide name and address information associated with a spoken telephone number.Information Services. These type of systems enable customers to access information lines to retrieve information about scores of sportilng events, traffic reports, weather reports, theatre bookings, restaurant reservations, etc. 
-  \item[$\bullet$ Agent Technology] Systems like Wildfire and Maxwell (AT and T) enable customers to interact with intelligent agents via voice dialogues in order to manage calls (both in-coming and out-going calls), manage mesaages (both voice and email), get information from the Web (eg, movie reviews, calling directories), customize services (e.g., first thing each morning the agent provides the traffic and weather reports), personalize services (via the agent personality, speed, helpfulness), and adapt to user preferences (e.g., learn how the user likes to do things and react appropriate.
-  \item[$\bullet$ Customer Care] The goal of customer care systems is to replace Interactive Voice Response systems with a dialogue type of interaction to make it easier for the user to get the desired help without having to navigate complicated menus or understand the terminology of the place being called for ihelp. The How May I Help You (HMIHY) customer care system of AT and T is an excellent example of this type of system.
-  \item[$\bullet$ Computer Telephony Integration] Since the telecommunication network of the future will integrate the telephony (POTS) and computer (Packet) networks, a range of new applications will arise which exploit this integration more fully. One prime example is registry services where the network locates the user and determines the most appropriate way to communicate with them. Another example is providing a user cache of the most frequently accessed people in order to provide a rapid access mechanism for these frequently called numbers.
-  \item[$\bullet$ Voice Dictation]  Although the desktop already supports voice dictation of documents, a prime telecommunications application of speech recognition would be for generating voice responses to email queries so that the resulting message becomes an email message back to the sender (rather than a voice mail response to an email message).
-\end{description}
-
-\section{Summary}
-In this chapter, we describes about the Introduction of Speech Recognition concept. Then further we discussed about Hidden mrkov's Model. In chapter we discussed about advantages of Speech Recognition systems, application of Speeh Recognition System.
-
 %==============================================================================================================================================
 \chapter{LITERATURE REVIEW}
 \section{Literature Review}
-The main objective of the present study was: “To develop a software for speech to
-text conversion”. The researcher had studied a lot of related literature to identify the
-different works done in the related area. The study had given a more clear vision in
-the task. In this present chapter, the brief information about the related research works
-for the present study is given.
+This chapter provides the information of POS taggers for different languges and review of various techniques used for tagging.
+
 \subsection{A glance over Related Literature}
 Initial computers were design just to do simple calculations; scientists have been
 trying to endow the computer with more and more intelligence. That is to make the
@@ -478,245 +365,91 @@ have been developed as a consequence of incremental advances in computer science
 Slowly these electronics devices have been spreading their roots in the soils of this
 society. Now computer systems are available for applications of civil amenities to
 medical diagnosis; home entertainment to space programs; simple calculations to
-complex mathematical modeling etc [7].
+complex mathematical modeling etc.
 
 In today’s fast placed world where every human being has to combat a race against
 time – a direct interface between the spoken words and computer user will gleefully
 accept the same words spontaneously typed on the computer screen with minimum
 lapse of time. The phenomenon is known as speech (voice) recognition.
 
-Speech recognition is an emerging technology where a speaker speaks to computer
+word tagging is an emerging technology where a speaker speaks to computer
 with the microphone and computer understands the given words. Speech recognition
 is a great supplement to traditional mouse and keyboard input; it will boost
 productivity and provide a new option for people who have difficulty using a
-keyboard.
-
-Speech is the most common mode of communication among human beings. The
-objective of speech recognition is to recognize the message being spoken. Differentorganization and researchers define the term “speech recognition”, and it can be summarized as follow:
-\begin{description}
-\item[$\bullet$] Speech recognition extracts the message information in a speech signal to control the
-actions of a machine in response to spoken commands.
-\item[$\bullet$]Speaker recognition identifies or verifies a speaker for restricting access to
-information, network or physical premises [7].
-\item[$\bullet$]Speech recognition is the process of finding a linguistic interpretation of a spoken
-utterance, typically, this means finding the sequence of characters, which forms the
-word.
-\end{description}
-
-\subsection{Some Empirical Studies}
-A life without speech (voice) is a picture without color. Speech is viewed in two
-different ways; one is generation of the voice by human beings and other is to
-understand the speech by the opponent. The God has gifted both the things to all the
-creature of the world and the same is more and efficiently utilized by human beings.
-In today environment speech is the best way for communication. But to reach to this
-level, speech had to passed from lots many revaluations. The computer was
-introduced and with the applications of AI human had tried to talk to computers. Lots
-many applications related to speech is developed. The development process can be
-summarized as follow:
-
-\subsubsection{An Unsurpassed Heritage in Speech}
-
-Bell telephone researchers began with Alexander Graham Bell and his assistant
-Watson held their historic telephone conversion in 1876. In the area of speech
-technology, the company has achieved numerous breakthroughs over the years. The
-groundbreaking research in the early years was to improve the quality and clarity of
-telephone conversations, understanding speech in telephone handsets. As time passes
-AT and T labs. Led the way with a number of other major innovations related speech,
-hearing and acoustics, taking machine (1939), speech coding and transmissionmachine, stereo recording and playback, speech synthesizer, speech recognition, taskoriented speech translation system, natural language voice enabled customer care
-system, called How May I Help You (HMIHY) (Figures of speech, white paper AT and
-T labs)
-
-AT and T, Bell’s lab, developed electronics speech synthesis in 1936. However, the
-first commercial voice to 1978 when Texas instruments introduced the first speech
-synthesizer in the form of children’s toy. The toy could spell the works back to the
-end user. The first voice recognition software for computers, was PLAINTALK by
-Apple Computers for Macintosh. In July of 2001, AT and T introduced the first in what
-will be a family of pioneering text to speech (TTS) products.
-
-IBM’s voice technology research originated back in the late 1950. In 1992, IBM’s
-AIX based speech server series supported the dictation of reports and letters. Next, the
-IBM continuous speech series provided continuous recognition of spoken commands
-and phrase. In 1993, a personal voice product IBM’s Personal Dictation System, was
-released for OS/2, In 1996 IBM voice Type Simply Speaking introduced high
-accuracy spoken dictation technology. In 1997, VivaVoice, a dictation product using
-continuous voice technology was introduced. User no longer had to pause between
-words, and could speak at a natural pace. IBM offers several voice software one of
-them is IBM WebSphere software which consists of IBM WebSphere Voice Server,
-IBM WebSphere Voice Response and IBM Message Center [10].
-
-\subsubsection{Language Technology in India}
-As the computers are being slowly woven into the fabrics of the society, more and
-more applications are being explored. Till recently, usage of computers was limited to
-English speaking community. Having found this limitation, as a proactive effort,many programmers were designed in India, with the initiatives of the Government and
-academia. Some R and D projects were also funded by the Department of Electronic
-(DoE), Government of India in this area.
-
-\subsubsection{The Early Efforts (During 1980-90)}
-DoE organized a symposium on “Linguistic Implications of Computer Based
-Information Processing” in 1979. Probably this was the first symposium in this area,
-supported by DoE. As the outcome about ten projects were initiated.
-
-\textbf{GIST development:} In the early 1980’s the development of GIST (Graphics and
-Intelligence – Based Script Technology) was started as a DoE sponsored project at the
-IIT, Kanpur (IITK) and later the technology was further matured at the Center for
-Development of Advanced Computing (CDAC) Pune. GIST allows display of various
-Indian Scripts on the computer monitor screen based on the information entered
-through a keyboard having an overlay of the concerned Indian scripts. Based on these
-developments, codes for various keys used in Indian Scripts and their layout has been
-standardized by the Bureau of Indian Standard. This development has led to a number
-of software products that are currently available in the market to enable diverse users
-to carry out word processing, DTP, Spread sheet, Spell checkers etc [23].
-
-In addition to GIST, CDAC has also brought out a software called “LEAP” for Indian
-Language word processing on Windows. Variety of fonts for Indian Language have
-also been developed by CDAC known as ISFOC fonts.
-
-\textbf{Corpora development:} Machine readable corpora of texts in Indian language
-(i.e. Tamil, Telugu, Kannada, Malayalam, Assamese, Bengali, Oriya, English,
-Hindi, Punjabi, Sanskrit, Kashmiri and Urdu have been developed.
-The software for grammatical tagging of corpora, word count and frequency count
-and spell checkers are also developed.
-
-\textbf{W. Byrne:} "Towards language independent acoustic modeling" this paper describes procedures and experimental results using speech from
-diverse source languages to build an ASR system for a single tar-get language. This work is intended to improve ASR in languages
-for which large amounts of training data are not available. they have developed both knowledge-based and automatic methods to
-map phonetic units from the source languages to the target language. We employed HMM adaptation techniques and Discrimi-
-native Model Combination to combine acoustic models from the individual source languages for recognition of speech in the target language[9].Byrne, William, et al. "Towards language independent acoustic modeling." Acoustics, Speech, and Signal Processing, 2000. ICASSP'00. Proceedings. 2000 IEEE International Conference on. Vol. 2. IEEE, 2000 [7].
-
-\textbf{Richard P. Lippmann:} "Speech recognition by machines and humans" Comparises six modern speech corpora with vocabularies ranging from 10 to more than 65,000 words and content ranging from read isolated words to spontaneous conversations. Error rates of machines are often more than an order of magnitude greater than those of
-humans for quiet, wideband, read speech. Machine performance degrades further below that of humans in noise, with
-channel variability, and for spontaneous speech. Humans can also recognize quiet, clearly spoken nonsense syllables and
-nonsense sentences with little high-level grammatical information. These comparisons suggest that the human–machine
-performance gap can be reduced by basic research on improving low-level acoustic-phonetic modeling, on improving
-robustness with noise and channel variability, and on more accurately modeling spontaneous speech.  Lippmann, Richard P. "Speech recognition by machines and humans [8].
-
-\textbf{Tanja Schultz:} "Language-independent and language-adaptive acoustic modeling for speech recognition" this paper decribes  the distribution of speech technology products all over the world, the portability to new target languages
-becomes a practical concern. As a consequence our research focuses on the question of how to port large
-vocabulary continuous speech recognition (LVCSR) systems in a fast and efficient way. More specifically we want
-to estimate acoustic models for a new target language using speech data from varied source languages, but only
-limited data from the target language. For this purpose, they introduce different methods for multilingual acoustic
-model combination and a polyphone decision tree specialization procedure. Recognition results using language-
-dependent, independent and language-adaptive acoustic models are presented and discussed in the framework of
-our GlobalPhone project which investigates LVCSR systems in 15 languages.   Schultz, Tanja, and Alex Waibel. "Language-independent and language-adaptive acoustic modeling for speech recognition" [9].
-
-\textbf{Willie Walker, Paul Lamere:}"Sphinx-4: A Flexible Open Source Framework for Speech Recognition" this paper describes about sphinux that the phinx-4 is a flexible, modular and pluggable framework to help foster new innovations
-in the core research of hidden Markov model (HMM) speech recognition systems. The
-design of Sphinx-4 is based on patterns that have emerged from the design of past
-systems as well as new requirements based on areas that researchers currently want
-to explore. To exercise this framework, and to provide researchers with a “research-
-ready” system, Sphinx-4 also includes several implementations of both simple and
-state-of-the-art techniques. The framework and the implementations are all freely
-available via open source [10].
+keyboard.\\
 
 
-\textbf{Fuliang Weng:} in his paper "Efficient Lattice Representation and Generation" 
-describe two
-new techniques for reducing word lattice sizes without eliminating
-hypotheses. The first technique is an algorithm to reduce the size of
-non-deterministic bigram word lattices. The algorithm iteratively
-combines lattice nodes and transitions if local properties show that
-this does not change the set of allowed hypotheses. On bigram word
-lattices generated from Hub4 Broadcast News speech, it reduces lat-
-tice sizes by half on average. It was also found to produce smaller
-lattices than the standard finite state automaton determinization and
-minimization algorithms. The second technique is an improved al-
-gorithm for expanding lattices with trigram language models. In-
-stead of giving all nodes a unique trigram context, this algorithm
-only creates unique contexts for trigrams that are explicitly repre-
-sented in the model. Backed-off trigram probabilities are encoded
-without node duplication by factoring the probabilities into bigram
-probabilities and backoff weights [11].     
+\textbf{Pallavi Bagul et al:} "rule based pos tagger for Marathi language."proposed a rule based pos tagger for Marathi language. The input sentence sent to tokenized function, the one which tokenizes the string into tokens and then comparing tokens with the Word Net. Tagging module assigned a tag to tokenized word and search for ambiguous word and pronoun. The ambiguous words were those words which can act as a noun and adjective in certain context, or act as an adjective and adverb in certain context. Then their ambiguity is resolved using Marathi grammar rules. Author used a corpus which is based on tourism domain called annotated corpus and 3 grammar rules are used for the experiment to resolve ambiguous word which acts a noun and adjective in certain context, or act as an adjective and adverb in certain context. 
+\\
 
-\textbf{Mohit Dua1, R.K.Aggarwal:}  " Punjabi Automatic Speech Recognition Using HTK" aims to discuss the implementation of an isolated
-word Automatic Speech Recognition system (ASR) for an
-Indian regional language Punjabi. The HTK toolkit based on
-Hidden Markov Model (HMM), a statistical approach, is used
-to develop the system. Initially the system is trained for 115
-distinct Punjabi words by collecting data from eight speakers
-and then is tested by using samples from six speakers in real
-time environments. To make the system more interactive and
-fast a GUI has been developed using JAVA platform for
-implementing the testing module. The paper also describes the
-role of each HTK tool, used in various phases of system
-development, by presenting a detailed architecture of an ASR
-system developed using HTK library modules and tools. The
-experimental results show that the overall system performance
-is 95.63percent and 94.08percent [12].       
+\textbf{H.B. Patil et.al:} "a Partof-Speech Tagger for Marathi Language using Limited Training Corpora" is also a rule based technique. Here sentence taken as an input generated tokens. Once token generated apply the stemming process to remove all possible affix and reduce the word to stem. SRR used to convert stem word to root word. They developed 25 SRR rule. The root-words that are identified are then given to morphological analyzer. The morphological analysis is carried out by dictionary lookup and morpheme analysis rules. Disambiguation is removed by the use of rule-base model or Hidden Markov Model. Based on the corpus they have identified 11 disambiguation rules that are used to remove the ambiguity. Stemming process removes all possible affixes, it change the meaning of stem word like (Anischit-Nischit).The size of the corpus is increased then more Rules can be discovered which will help to reduce the error rate.\\
+
+\textbf{Jyoti Singh Nisheeth \& Joshi Iti:} "Development of Marathi Part of Speech Tagger Using Statistical Approach"  They used statistical tagger using Unigram, Bigram, Trigram and HMM Methods. To achieve higher accuracy they use set of Hand coded rules, it include frequency and probability. They train and test their model by calculating frequency and probability of words of given corpus. In unigram technique find out how many time each word occur in corpus and assign each word to most common tag. Bigram tagger makes tag suggestion based on preceding tag i.e. it take two tags previous and current tag. In Trigram provides the transition between the tags and helps to capture the context of the sentence. The probability of a sequence is just the product of conditional probabilities of its trigrams. Basic idea of HMM is assigns the best tag to a word by calculating the forward and backward probabilities of tags along with the sequence provided as an input. Powerful feature of HMM is context description. The POS taggers described here is very simple and efficient for automatic tagging, but it is difficult for Marathi as it is morphological rich language. In this paper [15],
+
+Nidhi Mishra \& Amit Mishra proposed Part of Speech Tagging for Hindi Corpus. The system scans the Hindi (Unicode) corpus and then extracts the Sentences and words from the given Hindi corpus. Finally Display the tag of each Hindi word like noun tag, adjective tag, number tag, verb tag etc. and search tag pattern from database. The proposed model for Hindi language is apprehensible, but need to training data to increase accuracy. The efficiency of system judge on the basis of parameter of used need. \\
+
+\textbf{ Namrata Tapaswi \& Suresh Jain:} "a Treebank Based Deep Grammar Acquisition and Part-Of-Speech Tagging for Sanskrit Sentences" In the Sanskrit morphology meaning of the word is remain same. When affixes are added to the stem, words are differentiated at data base level directly. The input is one sentence per line, split the sentence in to words called lexeme. Read each word to find longest suffix, and eliminated the suffix until the word length is 2. Apply the lexical rules and assign the tag. Remove the disambiguity using context sensitive rules. For experimental result Author taken set of 100 words and manually evaluated, The system gives 90\% correct tags for each word. The evaluation was done in two stages. Firstly by applying the lexical rules and secondly, after applying the context sensitive rule. The POS taggers described here is very efficient for Sanskrit but it is difficult for Marathi as affix is attached to root word so the meaning of word get change.\\
+
+\textbf{Ghulam Qadir menon:} in his paper "Rule Based Part of Speech Tagging of Sindhi Language" Take input text, and generate token. Once token generated search and compare selected word from lexicon (SWL) .If word is found one or more times, then store associated tag and if not found add that word into lexicon by generating linguistic rule for new word. The tagset contains 67 tags. A lexicon named SWL is developed having entries of 26366 words. Author also found the frequency for tag. For this purpose, set of 186 disambiguation rules are used for SPOS tagging system. The contextual information is used for rule-based approach and manually assigns a part of speech tag to a word. Accuracy of 96.28\% was achieved from SPOS. When more words will be tagged and rules will be added then accuracy will be increased.\\
 
 
-\textbf{Kumar Ravinder:} "Comparison of HMM and DTW for Isolated Word Recognition System of Punjabi Language" describes about te issue Issue of speech interface to computer.
-Issue of speech interface to computer has been capturing the global
-attention because of convenience put forth by it. Although speech recognition is
-not a new phenomenon in existing developments of user-machine interface
-studies but the highlighted facts only provide promising solutions for widely
-accepted language English. This paper presents development of an experimen-
-tal, speaker-dependent, real-time, isolated word recognizer for Indian regional
-language Punjabi. Research is further extended to comparison of speech recog-
-nition system for small vocabulary of speaker dependent isolated spoken words
-in Indian regional language (Punjabi) using the Hidden Markov Model (HMM)
-and Dynamic Time Warp (DTW) technique. Punjabi language gives immense
-changes between consecutive phonemes. Thus, end point detection becomes
-highly difficult. The presented work emphasizes on template-based recognizer
-approach using linear predictive coding with dynamic programming computa-
-tion and vector quantization with Hidden Markov Model based recognizers in
-isolated word recognition tasks, which also significantly reduces the computa-
-tional costs. ref/cite Ravinder, Kumar. "Comparison of hmm and dtw for isolated word recognition system of punjabi language." Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications. Springer Berlin Heidelberg, 2010. 244-252 [13].
+\textbf{Kamal Sarkar, Vivekananda Gayen:}  "A Practical Part-of-Speech Tagger for Bengali" The system has two major phases: training phase and testing phase. In the training phase, the system is trained on a handful of POS tagged Bengali sentences by computing tag transition probabilities and word likelihoods or observation probabilities. In the testing phase, untagged Bengali sentences are submitted to the system for tagging. Viterbi algorithm is used for finding the most likely tag sequence for each sentence in the input document. Author implemented a supervised Bengali trigram POS Tagger from the scratch using a statistical machine learning technique that uses the second order Hidden Markov Model (HMM).The performance of the POS tagger can be improved by introducing more accurate method for unknown word handling.\\
 
-\textbf{Peter Grasch:} this paper we present recomment, our
-approach to natural language based unit critiquing. it discuss the
-developed prototype and present the corresponding user interface.
-In order to show the applicability of our concepts, we present the
-results of a user study. This study shows that speech interfaces
-have the potential to improve the perceived ease of use as well as
-the overall quality of recommendations [14].  
 
-\textbf{R Kuman and R K Sharma:}In this paper "An efficient post processing algorithm for online handwriting gurmukhi character recognition using set theory" a post processor for accuracy of character recognition of real-time online Gurmukhi script has been developed.  analysis is based on dataset consisting of 184 samples of
-each 45 characters of Gurmukhi script collected from four different categories of writers. Based
-on this extensive study, they  propose an efficient  algorithm for online handwritten Gurmukhi
-character recognition that achieves promising recognition accuracy of 95.6 percent for single character
-stroke sequencing. Beside character recognition the contribution in this paper is summarized
-in two folds as (i) the proposed scheme resolves stroke sequencing, (ii) overwritten strokes
-are identied and resolved. Moreover, for every stroke, complexity of adding new stroke for
-Gurmukhi character formation has been computed [15].  
+\textbf{Antony P J and Dr. Soman:} "a survey on developments of different POS tagger systems as well as POS tagsets for Indian languages" the existing approaches that have been used to develop POS tagger tools . They concluded that almost all existing Indian language POS tagging systems are based on statistical and hybrid approach. 
 
-\textbf{Divya Bansal1, Ankita Goel:} their papaer "Punjabi speech synthesis system using htk" describes an Hidden Markov Model-based Punjabi text-to-speech synthesis system (HTS), in
-which speech waveform is generated from Hidden Markov Models themselves, and applies it to Punjabi
-speech synthesis using the general speech synthesis architecture of HTK (HMM Tool Kit). This Hidden
-Markov Model based TTS can be used in mobile phones for stored phone directory or messages. Text
-messages and caller’s identity in English language are mapped to tokens in Punjabi language which are
-further concatenated to form speech with certain rules and procedures [16]. 
+This Paper specifies A CRF (Conditional Random Fields) based part of speech tagger and chunker for Hindi had been used by Aggarwal Himashu and Amni Anirudh. After evaluation they found that the strength of Conditional Random Fields can be seen on large training data and CRF performs better for chunking rather than for POS tagging with the training on same sized data. With training on 21000 words with the best feature set, the CRF based POS tagger is 82.67\% accurate, while the chunker performs at 90.89\% when evaluated with evaluation script from conll 2000.\\
 
-\textbf{Virender Kadyan:} "Punjabi speech to text system for connected words" This paper
-discusses the implementation of a connected word
-Speech to Textsystem (STT) for the Punjabi
-language.Hidden Markov model toolkit (HTK)has been
-used to develop the system. A Java platform based
-Graphical User Interface (GUI) has been developed to
-make the system fast and user friendly.The implemented
-system performs well with Word Recognition Rate
-(WR) 95.8 percent and 95.4 percent, Word Accuracy Rate (WA)
-94.1 percent and 91.6 percent and Word Error Rate (WER) 5.9 percent
-and 8.35 percent in class room and open environment
-respectively [17]. 
+\textbf{Navneet Garg et. al.:} used Rule Based Hindi Part of Speech Tagger for Hindi. The System is evaluated over a corpus of 26,149 words with 30 different standard part of speech tags for Hindi. The evaluation of the system is done on the different domains of Hindi Corpus. These domains include news, essay, and short storie and system achieved the accuracy of 87.55\%.\\
 
-\textbf{Wiqas Ghai:} in their paper " Continuous Speech Recognition for Punjabi Language " work has been
-done in the field of isolated word and connected word
-speech recognition for Punjabi language. Acoustic template
-matching and Vector quantization have been the supporting
-techniques. Continuous speech recognition is one area where
-no work has been done so far for Punjabi language. In this
-paper, an effort has been made to build automatic speech
-recognizer to recognize continuous speech sentences by
-using Tri-Phone based acoustic modeling approach on HTK
-3.4.1 speech engine. Overall recognition accuracy has
-been found to be 82.18 percent at sentence level and 94.32 percent
-at word level [18].
+\textbf{Brills et. al.:}specfies A Comparison of Unigram, Bigram, HMM and Brill's POS Tagging Approaches for some South Asian Languages has been done by Fahim Muhammad Hasan compared the performance of n-grams, HMM or transformation based POS Taggers on three South Asian Languages, Bangla, Hindi and Telegu. And we found that the HMM based tagger might perform better for English, but for South Asian languages, using corpora of different sizes, the transformation based Brills approach performs significantly better than any other approach when using a 26-tags tagset and pre-annotated training corpora consisting of a maximum of 25426, 26148 and 27511 tokens for Bangla, Hindi and Telegu respectively.\\
+
+\textbf{Manjit Kaur et. al:} introduced an improving Punjabi Part of Speech Tagger by Using Reduced Tag Set. They Effort to improve the accuracy of HMM based Punjabi POS tagger has been done by reducing the tagset. The tagset has been reduced from more than 630 tags to 36 tags. We observed a significant improvement in the accuracy of tagging. Their proposed tagger shows an accuracy of 92-95\% whereas the existing HMM based POS tagger was reported to give an accuracy of 85-87\%.\\
+
+\textbf{Nisheeth Joshi:} described efforts to build a Hidden Markov Model based Part of Speech Tagger. They used IL POS tag set for the development of tagger. HMM based statistical technique was used to train POS tagger for Hindi. They disambiguated correct word-tag combinations using the contextual information was available in the text and attained the accuracy of 92.13\% on test data.\\
+
+\textbf{N. Garg et al.:} in their paper "Rule Based Part-of-Speech Tagger for Hindi language" Their System is tested over dataset of 26,149 words with 30 different POS tags for Hindi. They have evaluated their system on the different domain of Hindi Corpus including news, essay, and short stories. The system achieved the accuracy of 87.55\%.The system mainly works in two steps- firstly the input words are found in the database; if it is present then it is tagged. Secondly if it is not present then various rules are applied. If a sentence consists of 12 words out of which 8 words are unknown, then system fails to tag them. It is hard to decide which rules should be handled first because word tagging resolution is based on neighbor’s word and hence it fails.
+
+\textbf{M. Shrivastava and P. Bhattacharyya} present a paper in which they have presented a simple Hidden markov model based POS tagger. As a pre-processor they have employed longest suffix matching stemmer and claim to achieve accuracy of 93.12\%. The core idea of their approach is to “explode” the input in order to increase the length of the input and to reduce the number of unique types they encountered at the time of learning. This orderly increases the probability score of the correct choice while simultaneously decreasing the ambiguity of the choices at each stage.
+In 2006, H. Agrawal and A. Mani have presented paper on “Part of Speech Tagging and Chunking with Conditional Random Fields” for Hindi. In which training is performed using a morph analyzer and CRF++ to provide extra information like root word and possible Part of speech tags for training. With training on 21000 words and best feature set, they have claimed to have achieved 82.67\% accuracy.\\
+
+\textbf{N. Joshi, H. Darbari and I. Mathur} They have used 15,200 sentences (3, 58,288 words) from tourism domain to train the system. They have used two special tags and to denote starting and ending of the sentence which was added to all the sentences of the training corpus. The accuracy of 92.13\% on test data was attained. Another Part of speech tagger by A. Ekbal, S. Mondal, and S. Bandyopadhyay Has been developed. Their tagger had been at the beginning trained on a Bengali training set of 20396 tokens. Then tested on the Bengali development test set consisting of 5022 tokens and demonstrated 90.9\% accuracy. After that their POS tagger is trained on the Hindi training set consisting of 21470 tokens and Telegu training sets consisting of 21415 tokens later. The POS tagger had been tested with Hindi and Telegu development sets, consisting of 5681 and 6098 tokens and it had demonstrated 82.05\% and 63.93\% accuracies respectively.
+ 
+\textbf{S. Singh et al.} have developed a methodology of POS tagging which the languages having lack of corpora can make use of. Their methodology makes use of locally annotated relatively small-sized corpora of around 15,562 words, fully comprehensive morphological analysis supported by high coverage terminology and a decision tree based learning algorithm. The performance evaluation of their system was done with 4-fold cross validation on the dataset of news domain and they claim to have 93.45\% accuracy. \\
+
+\textbf{Sandipan Dandapat et al.} presented a paper and described about a model that uses composition of supervised and unsupervised learning techniques using a Hidden Markov Model. They have made use of small tagged corpus and also large untagged corpus. They also make use of Morphological Analyzer that takes a word as input and gives all possible POS tags for the word. They took 1003 words from CIIL corpus and tagged it manually. They have obtained an overall accuracy of 95\%.\\
+ 
+\textbf{Asif Ekbal et al.} made the tagger for Bengali using Maximum Entropy, which makes use of the different circumstantial information of the words with the variety of features that are helpful in predicting the various Part of speech classes [27]. Their tagger has been trained with a training corpus of 72, 341 word forms and it uses a tag set of 26 different POS tags, defined for the Indian languages. Tagger has demonstrated an accuracy of 88.2\% for a test set of 20K word forms.\\
+ 
+\textbf{S. Dandapat, and S. Sarkar} on Bengali that makes use contextual information of words. They have used a structural or morphological analyzer to make better tagging accuracy of the tagger. Further, they have made use of semi-supervised learning by increasing the small labeled training dataset provided with a larger unlabeled training dataset (1,00,000 words). The tagger had an accuracy of about 89\% on the test data provided. The supervised model parameters are estimated from the annotated training data including 3085 sentences. Hidden Markov Model learned through supervised training is treated as the basic model for unsupervised learning. The model parameters are than reestimated using the Baum-Welch algorithm by training provided over a fixed set of 11,000 untagged sentences taken from CIIL (Consortium in Indian Languages) corpus. \\
+
+\textbf{A. Ekbal et al.} have developed a POS Tagger using Conditional Random Field. They have used tag set of 26 POS tags, which are defined for the Indian languages. The POS tagger they developed has been trained and tested with the 72,341words and 20k word forms, respectively. Their experimental results show that the CRF based tagger achieves accuracy of 90.3\%.\\
+
+\textbf{J. Singh et al.} have developed POS tagger for Marathi. They have used Trigram Method using statistical approach. The concept mainly used here is to explore the most likely POS tag for a current word based on given knowledge of previous two tags by calculating probabilities to determine which is the best sequence of tag . For testing the performance of the system, they have developed a test corpus of 2000 sentences. They claim to have got an accuracy of 91.63\%.\\
+ 
+\textbf{H.B.Patil et al:} In this approach they have demonstrated Part-of-Speech tagger for Marathi Language which is based on rules [32]. The hand–constructed rules are learnt from corpus and some manual additions after studying the grammar of Marathi language were added. They have tried to disambiguate tagging by analyzing the grammatical feature of the current word, its antecedent word, its succeeding word, etc. After testing their tagger, they claimed to have an accuracy of about 78.82\% on three different types of data sets. P. Bagul, A. Mishra et al. Presented a paper on “Rule based POS tagger for Marathi Text”. They describe their system as the one which tokenizes the sentences into tokens and then comparing tokens with the WordNet to assign their particular tags. They had resolved the ambiguity of the words using Marathi grammar rules.\\
+
+\textbf{K. R. Singha et al.} have presented a paper of an attempt to develop a lexicon based POS Tagger for Manipuri. They have applied a set of hand written language specific rules of Manipuri language. In this paper they have designed a 3- tier tag set for Manipuri. This tag set consists of 97 tags including generic attributes and language specific attribute values. \\
+
+\textbf{B.S. Purkayastha et al.} has been developed for Manipuri using stochastic approach namely Hidden Markov Model. Manipuri rule-based tagger gives tagged output that is used as corpus for training. In order to measure performance of tagger they have used manually annotated test set data that consist of 97 category of Manipuri language. They had claimed to have achieved the accuracy of 92\%.\\
+
+\textbf{Shambhavi.B.R et al.} has developed POS Tagger for Kannada language. In this POS tagging task of Kannada language they have chosen Second order Hidden Markov Model and Conditional Random Fields. Their training data consists of 51,269 tokens and test data set incorporate around 2932 tokens. Both data set are taken from EMILLE corpus. Corpus was partitioned into 95\% for training and 5\% for testing. Their experimental result shows the accuracy of the tools which is based on HMM is 79.9\% and CRF is 84.58\%.\\ 
+
+\textbf{P.J Antony and Soman.K.P.} They have developed their own tag set which consist of 30 tags and developed part of speech Tagger using a machine learning algorithm namely Support Vector Machine for Kannada Language. A corpus was collected from Kannada news papers and books, and it is manually morphologically analyzed and tagged using their developed tag set. After the performance of the system is evaluated they found that more efficient and accurate results were obtained as compared with preceding methods for Kannada POS tagging.\\
+ 
+\textbf{T.N. Vikram and Shalini R.} have also presented their work on Kannada Prototype morphological analyzer for south Indian language Kannada has been presented in this paper. The analyzer can simultaneously work as stemmer, spell checker and POS tagger and hence it is very efficient tool.
+A Sinhala language based Part of Speech (POS) Tagger using lexical semantics and HMM has been presented by A. Jayaweera and N.G.J Dias. They have used a statistical based approach, in which the tag identification process is done by calculating the probability of tag sequence and the probability of word-likelihood from the given dataset, where the language specific knowledge is axiomatically extracted from the annotated dataset. In this research they used the Beta version of the UCSC Corpus which contains around 6,50, 000 words and from which definite words are 70000, For known words they claim to have an accuracy of more than 90\%. \\ 
+
+\textbf{Sondi et al.} POS Tagging and chunking using CRF and Transformation Based Learning for Telugu has been described. They showed the use of Conditional Random Fields with the help of morphological information and the transformation rules in POS tagging and Chunking. How to train CRFs to achieve good accuracy over other machine learning method is shown. They have also shown how improved training Methods based on the morphological information, contextual and the lexical rules were difficult in achieving good results. They claimed to achieve an accuracy of about 77.37\% for Telugu, 78.66\% for Hindi, and 76.08\% for Bengali using CRF and TBL based POS tagger.\\
+
+
+
 
 
 %====================================================================================================================================================
 
 
-\chapter{PROPOSED SCHEME}
+\chapter{PRESENT WORK}
 \section{Motivation}
 Speech is the most common mode of communication among human beings. Speech
 offers a new way of interfacing with a computer that lends itself very well to solving
