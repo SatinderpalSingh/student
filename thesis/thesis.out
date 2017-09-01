@@ -46,21 +46,20 @@
 \BOOKMARK [3][-]{subsubsection.4.3.2.2}{ARPA Model Training}{subsection.4.3.2}% 46
 \BOOKMARK [3][-]{subsubsection.4.3.2.3}{Using Language Model with PocketSphinx}{subsection.4.3.2}% 47
 \BOOKMARK [2][-]{subsection.4.3.3}{Training Acoustic Model For Sphinx}{section.4.3}% 48
-\BOOKMARK [3][-]{subsubsection.4.3.3.1}{Resources}{subsection.4.3.3}% 49
-\BOOKMARK [3][-]{subsubsection.4.3.3.2}{Data Preparation}{subsection.4.3.3}% 50
-\BOOKMARK [3][-]{subsubsection.4.3.3.3}{Setting up the training scripts}{subsection.4.3.3}% 51
-\BOOKMARK [3][-]{subsubsection.4.3.3.4}{Setup the Format of Database Audio}{subsection.4.3.3}% 52
-\BOOKMARK [3][-]{subsubsection.4.3.3.5}{Configure Path to Files}{subsection.4.3.3}% 53
-\BOOKMARK [3][-]{subsubsection.4.3.3.6}{Configure Model Type and Model Parameters}{subsection.4.3.3}% 54
-\BOOKMARK [3][-]{subsubsection.4.3.3.7}{Configure Sound Feature Parameters}{subsection.4.3.3}% 55
-\BOOKMARK [3][-]{subsubsection.4.3.3.8}{Configure Parallel Jobs to Speedup Training}{subsection.4.3.3}% 56
-\BOOKMARK [3][-]{subsubsection.4.3.3.9}{Configure Decoding Parameters}{subsection.4.3.3}% 57
-\BOOKMARK [3][-]{subsubsection.4.3.3.10}{Training}{subsection.4.3.3}% 58
-\BOOKMARK [3][-]{subsubsection.4.3.3.11}{Training Internals}{subsection.4.3.3}% 59
-\BOOKMARK [3][-]{subsubsection.4.3.3.12}{Testing}{subsection.4.3.3}% 60
-\BOOKMARK [3][-]{subsubsection.4.3.3.13}{Using the Model}{subsection.4.3.3}% 61
-\BOOKMARK [3][-]{subsubsection.4.3.3.14}{Output}{subsection.4.3.3}% 62
-\BOOKMARK [0][-]{chapter.5}{CONCLUSION}{}% 63
-\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}% 65
-\BOOKMARK [0][-]{section*.4}{Bibliography}{}% 66
+\BOOKMARK [3][-]{subsubsection.4.3.3.1}{Setting up the training scripts}{subsection.4.3.3}% 49
+\BOOKMARK [3][-]{subsubsection.4.3.3.2}{Setup the Format of Database txt}{subsection.4.3.3}% 50
+\BOOKMARK [3][-]{subsubsection.4.3.3.3}{Configure Path to Files}{subsection.4.3.3}% 51
+\BOOKMARK [3][-]{subsubsection.4.3.3.4}{Configure Model Type and Model Parameters}{subsection.4.3.3}% 52
+\BOOKMARK [3][-]{subsubsection.4.3.3.5}{Configure Parallel Jobs to Speedup Training}{subsection.4.3.3}% 53
+\BOOKMARK [3][-]{subsubsection.4.3.3.6}{Configure Decoding Parameters}{subsection.4.3.3}% 54
+\BOOKMARK [3][-]{subsubsection.4.3.3.7}{Training}{subsection.4.3.3}% 55
+\BOOKMARK [3][-]{subsubsection.4.3.3.8}{Training Internals}{subsection.4.3.3}% 56
+\BOOKMARK [3][-]{subsubsection.4.3.3.9}{Testing}{subsection.4.3.3}% 57
+\BOOKMARK [2][-]{subsection.4.3.4}{Training Details}{section.4.3}% 58
+\BOOKMARK [3][-]{subsubsection.4.3.4.1}{Output}{subsection.4.3.4}% 59
+\BOOKMARK [1][-]{section.4.4}{Comparison}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.5}{POS tags Chosen for the Current Scheme}{chapter.4}% 61
+\BOOKMARK [0][-]{chapter.5}{CONCLUSION}{}% 62
+\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.2}{Future Work}{chapter.5}% 64
+\BOOKMARK [0][-]{section*.4}{Bibliography}{}% 65

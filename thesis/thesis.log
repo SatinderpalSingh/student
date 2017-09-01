@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  31 AUG 2017 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.22)  31 AUG 2017 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1527,7 +1527,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
-<jagjit.png, id=459, 307.1475pt x 180.675pt>
+<jagjit.png, id=454, 307.1475pt x 180.675pt>
 File: jagjit.png Graphic file (type png)
  <use jagjit.png>
 Package pdftex.def Info: jagjit.png used on input line 472.
@@ -1590,13 +1590,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 584--586
 
  []
 
-<Screenshot1.png, id=497, 1371.1225pt x 770.88pt>
+<Screenshot1.png, id=492, 1371.1225pt x 770.88pt>
 File: Screenshot1.png Graphic file (type png)
  <use Screenshot1.png>
 Package pdftex.def Info: Screenshot1.png used on input line 589.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
-<jagjit1.png, id=498, 1371.1225pt x 770.88pt>
+<jagjit1.png, id=493, 1371.1225pt x 770.88pt>
 File: jagjit1.png Graphic file (type png)
  <use jagjit1.png>
 Package pdftex.def Info: jagjit1.png used on input line 604.
@@ -1616,201 +1616,330 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--616
  []
 
 [31 <./Screenshot1.png>] [32 <./jagjit1.png>]
-<Screenshot2.png, id=511, 500.87125pt x 271.0125pt>
-File: Screenshot2.png Graphic file (type png)
- <use Screenshot2.png>
-Package pdftex.def Info: Screenshot2.png used on input line 626.
-(pdftex.def)             Requested size: 500.87001pt x 271.01183pt.
-
-Overfull \hbox (45.62589pt too wide) in paragraph at lines 626--627
- [][] 
- []
-
-[33 <./Screenshot2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
+<jagjit2.png, id=506, 1362.08875pt x 335.2525pt>
+File: jagjit2.png Graphic file (type png)
+ <use jagjit2.png>
+Package pdftex.def Info: jagjit2.png used on input line 626.
+(pdftex.def)             Requested size: 408.62978pt x 100.57652pt.
+ [33 <./jagjit2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
+Underfull \hbox (badness 10000) in paragraph at lines 694--696
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
+Underfull \hbox (badness 10000) in paragraph at lines 694--696
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
+Underfull \hbox (badness 10000) in paragraph at lines 694--696
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
+
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 745--746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--677
-
- []
-
-[34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 709--716
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--719
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--719
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 717--719
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--770
-
- []
-
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
-[]|\T1/ptm/m/n/12 (+20) Tidigits Dig-its
- []
-
-
-Underfull \hbox (badness 4060) in paragraph at lines 790--791
-[]|\T1/ptm/m/n/12 (+20) RM1 Com-mand
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 792--793
-[]|\T1/ptm/m/n/12 (+20) WSJ1 5k Small
- []
-
-
-Underfull \hbox (badness 5954) in paragraph at lines 794--795
-[]|\T1/ptm/m/n/12 (+20) WSJ1 20k Big
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--819
-
- []
-
-[38]
-Overfull \hbox (11.1825pt too wide) in paragraph at lines 829--841
+Overfull \hbox (11.1825pt too wide) in paragraph at lines 763--775
 \T1/ptm/m/it/12 (-20) $DEC_CFG_LISTOFFILES = "$DEC_CFG_BASE_DIR/etc/$DEC_CFG_DB
 _NAME_test.fileids";
  []
 
-<Screenshot3.png, id=545, 1371.1225pt x 770.88pt>
+[36] <Screenshot3.png, id=530, 1371.1225pt x 770.88pt>
 File: Screenshot3.png Graphic file (type png)
  <use Screenshot3.png>
-Package pdftex.def Info: Screenshot3.png used on input line 857.
+Package pdftex.def Info: Screenshot3.png used on input line 791.
+(pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--809
+
+ []
+
+[37 <./Screenshot3.png>] <jagjit3.png, id=536, 1371.1225pt x 424.58624pt>
+File: jagjit3.png Graphic file (type png)
+
+<use jagjit3.png>
+Package pdftex.def Info: jagjit3.png used on input line 818.
+(pdftex.def)             Requested size: 411.33992pt x 127.37685pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--826
+
+ []
+
+<jagjit6.png, id=537, 545.03625pt x 580.1675pt>
+File: jagjit6.png Graphic file (type png)
+ <use jagjit6.png>
+Package pdftex.def Info: jagjit6.png used on input line 829.
+(pdftex.def)             Requested size: 272.51746pt x 290.08302pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<jagjit4.png, id=538, 1371.1225pt x 770.88pt>
+File: jagjit4.png Graphic file (type png)
+ <use jagjit4.png>
+Package pdftex.def Info: jagjit4.png used on input line 841.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 863--875
-
- []
-
-[39] [40 <./Screenshot3.png>]
-Overfull \hbox (7.31975pt too wide) in paragraph at lines 887--888
-[]\T1/ptm/m/n/12 (-20) This script slave_feat.pl will com-pute, for each train-
-ing ut-ter-ance, a se-quence of 13-dimensional
- []
-
-<Screenshot4.png, id=554, 1371.1225pt x 770.88pt>
-File: Screenshot4.png Graphic file (type png)
- <use Screenshot4.png>
-Package pdftex.def Info: Screenshot4.png used on input line 898.
-(pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
+<jagjit5.png, id=539, 1204.5pt x 803.0pt>
+File: jagjit5.png Graphic file (type png)
+ <use jagjit5.png>
+Package pdftex.def Info: jagjit5.png used on input line 851.
+(pdftex.def)             Requested size: 361.35278pt x 240.90186pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 904--905
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--871
+
+ []
+
+[38 <./jagjit3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--883
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 886--896
+
+ []
+
+[39 <./jagjit6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
+
+ []
+
+[40 <./jagjit4.png> <./jagjit5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 899--902
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 925--929
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 932--935
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
+Underfull \hbox (badness 10000) in paragraph at lines 938--943
 
  []
 
-<Screenshot5.png, id=559, 1371.1225pt x 770.88pt>
-File: Screenshot5.png Graphic file (type png)
- <use Screenshot5.png>
-Package pdftex.def Info: Screenshot5.png used on input line 935.
-(pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--945
+
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 946--951
 
-<Screenshot6.png, id=560, 1371.1225pt x 770.88pt>
-File: Screenshot6.png Graphic file (type png)
- <use Screenshot6.png>
-Package pdftex.def Info: Screenshot6.png used on input line 942.
-(pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
 
-[42 <./Screenshot4.png>] [43 <./Screenshot5.png> <./Screenshot6.png>] [44
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--959
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--964
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--969
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 976--979
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 980--981
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--984
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 987--990
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 991--992
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--996
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 997--999
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1004
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1013
+
+ []
+
+[43] [44
 
 ]
 bibitemlist
+
+LaTeX Warning: Empty `thebibliography' environment on input line 1055.
+
 [45
 
-] [46]
+]
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
@@ -1820,25 +1949,25 @@ bibitemlist
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1129.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1060.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1060.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1060.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1060.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A444B6BB621B706C7267FB7FE91E234C;4569.
+(rerunfilecheck)             Checksum: A0E5229E64972D21826F98C49E4A6410;4444.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1129.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1060.
  ) 
 Here is how much of TeX's memory you used:
- 17623 strings out of 493029
- 273487 string characters out of 6136234
- 764204 words of memory out of 5000000
+ 17582 strings out of 493029
+ 273042 string characters out of 6136234
+ 764206 words of memory out of 5000000
  20636 multiletter control sequences out of 15000+600000
- 48631 words of font info for 156 fonts, out of 8000000 for 9000
+ 47956 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,12n,39p,2078b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1848,10 +1977,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (46 pages, 1142452 bytes).
+Output written on thesis.pdf (45 pages, 940983 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 171 named destinations out of 1000 (max. 500000)
- 19001 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 563 compressed objects within 6 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 18998 words of extra memory for PDF output out of 20736 (max. 10000000)
 

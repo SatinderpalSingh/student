@@ -619,11 +619,11 @@ First of all you need to cleanup text. Expand abbreviations, convert numbers to 
 \subsubsection{ARPA Model Training}
 The process for creating a language model is as follows:
 \begin{enumerate}
-  \item  Prepare a reference text that will be used to generate the language model. The language model toolkit expects its input to be in the form of normalized text files, with utterances delimited by <s> and </s> tags. A number of input filters are available for specific corpora such as Switchboard, ISL and NIST meetings, and HUB5 transcripts. The result should be the set of sentences that are bounded by the start and end sentence markers: <s> and </s>. Here's an example: 
+  \item  Prepare a reference text that will be used to generate the language model. The language model toolkit expects its input to be in the form of normalized text files, with utterances delimited by <s> and </s> tags. A number of input filters are available for specific corpora such as Switchboard, ISL and NIST meetings, and HUB5 transcripts. The result should be the set of sentences that are bounded by the start and end sentence markers: <s> and </s>. Here's an example: fsf
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=1.0]{Screenshot2}
+    \includegraphics[scale=0.3]{jagjit2}
     \caption{Text Prepration}
 %    \label{fig:mesh1}
 \end{figure}
@@ -647,33 +647,14 @@ More data will generate better language models.
 
 \subsubsection{Using Language Model with PocketSphinx}
 
-\textit{pocketsphinx\_continuous} can be run from the command-line to recognize speech. Assuming it is installed under \textit{/usr/local}, and your language model and dictionary are called \textit{.dic} and \textit{.lm} and placed in the current folder, try running the following command: 
+\textit{pocketsphinx\_continuous} can be run from the command-line to tagging words. Assuming it is installed under \textit{/usr/local}, and your language model and dictionary are called \textit{.dic} and \textit{.lm} and placed in the current folder, try running the following command: 
 
-\textit{pocketsphinx\_continuous -inmic yes -lm weather.lm -dict weather.dic}
+\textit{make}
 
 
 \subsection{Training Acoustic Model For Sphinx}
 CMUSphinx project comes with several high-quality acoustic models. Before starting with training we need to prepared the language model and  need to train the model and have resources to do that.
 
-\subsubsection{Resources}
-\begin{itemize}
- \item[$\bullet$] 1 hour of recording for command and control for single speaker
- \item[$\bullet$] 5 hour of recordings of 200 speakers for command and control for many speakers
- \item[$\bullet$] 10 hours of recordings for single speaker dictation
- \item[$\bullet$] 50 hours of recordings of 200 speakers for many speakers dictation
- \item[$\bullet$] Knowledge on phonetic structure of the language
- \item[$\bullet$] Time to train the model and optimize parameters (1 month)
-\end{itemize}
-
-\subsubsection{Data Preparation}
-
-The trainer learns the parameters of the models of the sound units using a set of sample speech signals. This is called a training database. A choice of already trained databases will also be provided.\\\\
-The database contains information required to extract statistics from the speech in form of the acoustic model.\\\\
-The trainer needs to be told which sound units want it to learn the parameters of, and at least the sequence in which they occur in every speech signal in training database. This information is provided to the trainer through a file called the transcript file, in which the sequence of words and non-speech sounds are written exactly as they occurred in a speech signal, followed by a tag which can be used to associate this sequence with the corresponding speech signal.\\\\
-The trainer then looks into a dictionary which maps every word to a sequence of sound units, to derive the sequence of sound units associated with each signal.\\\\
-Thus, in addition to the speech signals, also be given a set of transcripts for the database (in a single file) and two dictionaries, one in which legitimate words in the language are mapped sequences of sound units (or sub-word units), and another in which non-speech sounds are mapped to corresponding non-speech or speech-like sound units. We will refer to the former as the language dictionary and the latter as the filler dictionary.\\\\
-After training, it's mandatory to run the decoder to check training results. The Decoder takes a model, tests part of the database and reference transcriptions and estimates the quality (WER) of the model. During the testing stage we use the language model with the description of the order of words in the language.\\\\
-First of all, design a database for training or download an existing one. For example, you can purchase a database from LDC. You'll have to convert it to a proper format. 
 
 \textbf{The file structure for the database is:} 
 
@@ -693,26 +674,22 @@ First of all, design a database for training or download an existing one. For ex
 	\end{description}
  \item[$\bigtriangledown$] wav
 	\begin{description}
-		\item[$\bigtriangledown$] speaker\_1
+		\item[$\bigtriangledown$] tagger\_1
 			\begin{description}
-				\item[$\bullet$] file\_1.wav - \textit{Recording of speech utterance}
+				\item[$\bullet$] file\_1.txt  
 			\end{description}
-		\item[$\bigtriangledown$] speaker\_2
+		\item[$\bigtriangledown$] tagger\_2
 			\begin{description}
-				\item[$\bullet$]file\_2.wav
+				\item[$\bullet$]file\_2.txt
 			\end{description}
 	\end{description}	
 \end{description}
 
 
 
-\textit{Fileids (some\_db\_train.fileids and some\_db\_test.fileids)} file is a text file listing the names of the recordings (utterance ids) one by line.
+\textit{Fileids (some\_db\_train.fileids and some\_db\_test.fileids)} file is a text file listing the names of the tagging one by line.
 \\\\
-\textit{Transcription file (your\_db\_train.transcription and your\_db\_test.transcription)} is a text file listing the transcription for each audio file. t's important that each line starts with <s> and ends with </s> followed by id in parentheses. Also note that parenthesis contains only the file, without speaker\_n directory. It's critical to have exact match between fileids file and the transcription file. The number of lines in both should be identical. Last part of the file id (speaker1/file\_1) and the utterance id file\_1 must be the same on each line.\\\\
-Speech recordings (wav files) Recording files must be in MS WAV format with specific sample rate - 16 kHz, 16 bit, mono for desktop application, 8kHz, 16bit, mono for telephone applications. Double-check that, wrong audio file format is the most common source of training issues. Audio files shouldn't be very long and shouldn't be very short. Optimal length is not less than 5 seconds and not more than 30 seconds. Amount of silence in the beginning of the utterance and in the end of the utterance should not exceed 0.2 second. \\\\
-\textit{Phoneset file (your\_db.phone)} should have one phone per line. The number of phones should match the phones used in the dictionary plus the special SIL phone for silence.\\\\
-\textit{Language model file (your\_db.lm.DMP)} should be in ARPA format or in DMP format. 
-\textit{Filler dictionary (your\_db.filler)} contains filler phones (not-covered by language model non-linguistic sounds like breath, hmm or laugh).\\\\
+
 \subsubsection{Setting up the training scripts}
 To start the training change to the database folder and run the following commands:\\\\
 \textit{sphinxtrain -t <model\_name> setup}\\\\
@@ -720,7 +697,7 @@ To start the training change to the database folder and run the following comman
 This will copy all the required configuration files into etc subfolder of your database folder and prepare database for training, the structure after setup will be: 
 \begin{itemize}
   \item[$\bullet$] etc
-  \item[$\bullet$] wav
+  \item[$\bullet$] txt
 \end{itemize}
 
 After training other data folders will be created, the database should look like this: 
@@ -733,16 +710,16 @@ After training other data folders will be created, the database should look like
   \item[$\triangleright$]model\_parameters
   \item[$\triangleright$]model\_architecture
   \item[$\triangleright$]result
-  \item[$\triangleright$]wav
+  \item[$\triangleright$]txt
 %  \item[$\triangleright$]
 %  \item[$\triangleright$]
 \end{itemize}
 
 
-\subsubsection{Setup the Format of Database Audio}
+\subsubsection{Setup the Format of Database txt}
 After setup, we need to edit the configuration files in etc folder, there are many variables but to get started we need to change only a few. First of all find the file \textit{etc/sphinx\_train.cfg}\\
 \textit{
-\$CFG\_WAVFILES\_DIR = "\$CFG\_BASE\_DIR/wav";\\
+\$CFG\_WAVFILES\_DIR = "\$CFG\_BASE\_DIR/txt";\\
 \$CFG\_WAVFILE\_EXTENSION = 'sph';\\
 \$CFG\_WAVFILE\_TYPE = 'nist';  one of nist, mswav, raw
 }
@@ -764,58 +741,15 @@ After setup, we need to edit the configuration files in etc folder, there are ma
 \#\$CFG\_HMM\_TYPE  = '.ptm.'; \# Sphinx4, Pocketsphinx, faster model\\
 }
 
-
-If you are training continuous models for large vocabulary and have more than 100 hours of data, put 32 here. It can be any degree of 2: 4, 8, 16, 32, 64. 
+ 
 \textit{\$CFG\_FINAL\_NUM\_DENSITIES = 8;}\\
 
-This value is the number of senones to train in a model. The more senones model has, the more precisely it discriminates the sounds. But on the other hand if you have too many senones, model will not be generic enough to recognize unseen speech. That means that the WER will be higher on unseen data. That's why it is important to not overtrain the models. In case there are too many unseen senones, the warnings will be generated in the norm log on stage 50 below: 
+ In case there are too many unseen senones, the warnings will be generated in the norm log on stage 50 below: 
 \textit{
 ERROR: "gauden.c", line 1700: Variance (mgau= 948, feat= 0, density=3, \\
 component=38) is less then 0. Most probably the number of senones is too\\
 high for such a small training database. Use smaller \$CFG\_N\_TIED\_STATES.}
 
-\begin{table}
-\centering
-\caption{Continuous Model Senones and Density}
-\begin{tabular}
-{ |p{2cm}||p{2cm}|p{2cm}|p{2cm}|p{3cm}|  }
- \hline
-
- \multicolumn{5}{|c|}{Number of Senones and Number of Densities} \\
- \hline
- Vocabulary  &  Hours in db  & Senones &  Densities & Example \\
- \hline
- 20 &	5    &	200  &	8  &	Tidigits Digits Recognition\\
-\hline
-100 &	20   &	2000 &	8  &	RM1 Command and Control\\
-\hline
-5000 &	30   &	4000 &	16 &	WSJ1 5k Small Dictation\\
-\hline
-20000 &	80   &	4000 &	32 &	WSJ1 20k Big Dictation\\
-\hline
-60000 &	200  &	6000 &	16 &	HUB4 Broadcast News\\
-\hline
-60000 &	2000 &	12000 &	64 &	Fisher Rich Telephone Transcription\\
-
- \hline
-
-\end{tabular}
-\end{table}
-
-
-It might seem that diversity could improve the model but it's not the case. Diverse speech requires some artificial speech prompts and that decrease the naturalness of the speech. Artificial models don't help in real life decoding. In order to build a best database you need to try to reproduce real environment as much as possible. It's even better to collect more speech to try to optimize the database size.
-
-It's important to remember, that optimal numbers depends on your database. To train model properly, you need to experiment with different values and try to select the ones which give best WER for a development set. You can experiment with number of senones, number of gaussian mixtures at least. Sometimes it's also worth to experiment with phoneset or number of estimation iterations. 
-
-\subsubsection{Configure Sound Feature Parameters}
-The default for sound files used in Sphinx is a rate of 16 thousand samples per second (16KHz). If this is the case, the etc/feat.params file will be automatically generated with the recommended values. \\
-\textit{
-\# Feature extraction parameters
-\$CFG\_WAVFILE\_SRATE = 16000.0;\\
-\$CFG\_NUM\_FILT = 31; \# For wideband speech it's 40, for telephone 8khz reasonable value is 31\\
-\$CFG\_LO\_FILT = 200; \# For telephone 8kHz speech value is 200\\
-\$CFG\_HI\_FILT = 3500; \# For telephone 8kHz speech value is 3500\\
-}
 
 \subsubsection{Configure Parallel Jobs to Speedup Training}
 If you are on multicore machine or in PBS cluster you can run training in parallel, the following options should do the trick: \\
@@ -876,115 +810,218 @@ perl scripts\_pl/90.deleted\_interpolation/deleted\_interpolation.pl\\
 
  Scripts launch jobs on your machine, and the jobs will take a few minutes each to run through.
 
-Before you run any script, note the directory contents of your current directory. After you run each slave*.pl note the contents again. Several new directories will have been created. These directories contain files which are being generated in the course of your training. At this point you need not know about the contents of these directories, though some of the directory names may be self explanatory and you may explore them if you are curious.
-
-One of the files that appears in your current directory is an .html file, named model.html, depending on which database you are using. This file will contain a status report of jobs already executed. Verify that the job you launched completed successfully. Only then launch the next slave*.pl in the specified sequence. Repeat this process until you have run the slave*.pl in all directories.
-
-Note that in the process of going through the scripts in 00* through 90*, you will have generated several sets of acoustic models, each of which could be used for recognition. Notice also that some of the steps are required only for the creation of semi-continuous models. If you execute these steps while creating continuous models, the scripts will benignly do nothing. 
-
- On the stage 000.comp\_feat the feature feles are extracted. The system does not directly work with acoustic signals. The signals are first transformed into a sequence of feature vectors, which are used in place of the actual acoustic signals.
-
-This script slave\_feat.pl will compute, for each training utterance, a sequence of 13-dimensional vectors (feature vectors) consisting of the Mel-frequency cepstral coefficients (MFCCs). Note that the list of wave files contains a list with the full paths to the audio files. Since the data are all located in the same directory as you are working, the paths are relative, not absolute. You may have to change this, as well as the model\_test.fileids file, if the location of data is different. The MFCCs will be placed automatically in a directory called 'feat'. Note that the type of features vectors you compute from the speech signals for training and recognition, outside of this tutorial, is not restricted to MFCCs. You could use any reasonable parameterization technique instead, and compute features other than MFCCs. CMUSphinx can use features of any type or dimensionality. The format of the features is described on the page MFC Format . 
-
 \subsubsection{Testing}
- It's critical to test the quality of the trained database in order to select best parameters, understand how application performs and optimize performance. To do that, a test decoding step is needed. The decoding is now a last stage of the training process.
-
-You can restart decoding with the following command: 
-\textit{sphinxtrain -s decode run}
- This command will start a decoding process using the acoustic model you trained and the language model you configured in the \textit{etc/sphinx\_train.cfg} file.
+The previous work contributes in the investigation of POS taggers for different Indian languages only with use of limited labeled data. The previous methods worked to improve the accuracy with use of limited POS taggers. In this research, new platform is used to introduce new taggers for Hindi language and accuracy of work is also increased. The experimental setup for hindi POS taggers is as following.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Screenshot4}
-    \caption{Testing Model}
+    \includegraphics[scale=0.3]{jagjit3}
+    \caption{Experimental setup of Linux for Hindi POS taggers}
 %    \label{fig:mesh1}
 \end{figure}
 
-\subsubsection{Using the Model}
-After training, the acoustic model is located in \\
+\subsection{Training Details}
+Trained on a corpus containing 30,409,730 tokens.\\
+Lexicon contains 471093 tokens.\\
 
-\textit{model\_parameters/<your\_db\_name>.cd\_cont\_<number\_of senones>}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{jagjit6}
+    \caption{Testing Details}
+%    \label{fig:mesh1}
+\end{figure}
 
-or in 
-
-\textit{model\_parameters/<your\_db\_name>.cd\_semi\_<number\_of senones>}
-
-The model should have the following files:
-\begin{itemize}
-	\item[$\bullet$] mdef
-	\item[$\bullet$] feat.params
-	\item[$\bullet$]mixture\_weights
-	\item[$\bullet$]means
-	\item[$\bullet$]noisedict
-	\item[$\bullet$]transition\_matrices
-	\item[$\bullet$]variances
-\end{itemize}
-
-Depending on the type of the model you trained. To use the model in pocketsphinx, simply point to it with the -hmm option: \\\\
-
-\textit{pocketsphinx\_continuous -hmm <model\_folder> -lm <some\_lm> -dict <some\_dict>.}
 
 \subsubsection{Output}
-
-The output the model trained for Punjabi language is given in the figure below:
-
+Figure 4.6 below shows the results of newly introduced POS taggers. These are increased from seven to twenty five. These are increased from seven to twenty five. These taggers also affected the accuracy of tagging and improved efficiency of limited data for Hindi language.
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Screenshot5}
-    \caption{Punjabi Dictation}
+    \includegraphics[scale=0.3]{jagjit4}
+    \caption{Results of Hindi POS Taggers}
 %    \label{fig:mesh1}
 \end{figure}
+
+\section{Comparison}
+Figure 4.7 indicates that in previous study the word accuracy rate was just 91\%. But, as the new POS taggers introduced and linux platform used, it increased the accuracy rate of tagging by 2.2\%. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Screenshot6}
-    \caption{punjabi Dictation}
+    \includegraphics[scale=0.3]{jagjit5}
+    \caption{Comparison of obtained results with existing results}
 %    \label{fig:mesh1}
 \end{figure}
 
+
+\section{POS tags Chosen for the Current Scheme}
+
+This section gives the rationale behind each tag that has been chosen in this tag
+set.
+
+\textbf{NN Noun}\\
+
+The tag NN for nouns has been adopted from Penn tags as such. The Penn tag
+set makes a distinction between noun singular (NN) and noun plural (NNS).
+As mentioned earlier, distinct tags based on grammatical information are 
+avoided in IL tagging scheme. Any information that can be obtained from any
+other source is not incorporated in the POS tag. The current scheme has only one tag (NN) for common nouns
+without getting into any distinction based on the grammatical information
+contained in a given noun word\\
+
+\textbf{NST Noun denoting spatial and temporal expressions}\\
+
+A tag NST has been included to cover an important phenomenon of Indian
+languages. 
+
+\textbf{NNP Proper Nouns}\\
+
+Therefore, in the Indian languages' context, annotating proper nouns with a
+separate tag will not be very fruitful from machine learning point of view. In
+fact, the identification of proper nouns can be better achieved by named entity
+filters. \\
+
+\textbf{PRP Pronoun}\\
+
+Penn tags make a distinction between personal pronouns and possessive
+pronouns. This distinction is avoided here. All pronouns are marked as PRP. In
+Indian languages all pronouns inflect for all cases (accusative, dative,
+possessive etc.). In case we have a separate tag for possessive pronouns, new
+tags will have to be designed for all the other cases as well. This will increase
+the number of tags which is unnecessary. So only one tag is used for all the
+pronouns. The necessity for keeping a separate tag for pronouns was also
+discussed, as linguistically, a pronoun is a variable and functionally it is a
+noun. However, it was decided that the tag for pronouns will be helpful for
+anaphora resolution tasks and should be retained. \\
+
+\textbf{ DEM Demonstratives }\\
+
+The tag 'DEM' has been included to mark demonstratives. The necessity of
+including a tag for demonstratives was felt to cover the distinction between a
+pronoun and a demonstrative.\\
+
+\textbf{VM Verb Main }\\
+
+Verbal constructions in languages may be composed of more than one word
+sequences. In the current tagging scheme the
+support verbs (such as dAlanA in kara dAlAtA hE, uThanA in cOMka uThA thA
+etc) are also tagged as VAUX. The group can be finite or non-finite. The main 
+verb need not be marked for finiteness. Normally, one of the auxiliaries carries
+the finiteness feature. 
+
+\textbf{VM MAin Verb}\\
+
+The main verb is also called the lexical verb or the principal verb. This term refers to the important verb in the sentence, the one that typically shows the action or state of being of the subject. Main verbs can stand alone, or they can be used with a helping verb, also called an auxiliary verb.\\
+
+\textbf{VAUX Verb Auxiliary}\\
+An auxiliary verb (abbreviated aux) is a verb that adds functional or grammatical meaning to the clause in which it appears, such as to express tense, aspect, modality, voice, emphasis, etc. Auxiliary verbs usually accompany a main verb. The main verb provides the main semantic content of the clause.
+
+\textbf{JJ Adjective }\\
+
+The simplest definition of an adjective is that it is a word that describes or clarifies a noun. Adjectives describe nouns by giving some information about an object's size, shape, age, color, origin or material.\\
+
+\textbf{RB Adverb }\\
+
+For the adverbs also, the tag RB has been borrowed from Penn tags. Similar to
+the adjectives, Penn tags make a distinction between comparative and
+superlative adverbs as well. This distinction is not made in this tagger. This is
+in accordance with our philosophy of coarseness in linguistic analysis. \\
+
+\textbf{PSP Postposition }\\
+
+All Indian languages have the phenomenon of postpositions. Postpositions
+express certain grammatical functions such as case etc. The postposition will be
+marked as PSP in the current tagging scheme.\\
+
+\textbf{RP Particle }\\
+
+Expressions such as bhI, to, jI, sA, hI, nA, etc in Hindi would be marked as RP.
+The nA in the above list is different from the negative nA. Hindi and some other
+Indian languages have an ambiguous 'nA' which is used both for negation
+(NEG) and for reaffirmation (RP). Similarly, the particle wo is different from
+CC wo. \\
+
+\textbf{CC Conjuncts(co-ordinating and subordinating) }\\
+
+The tag CC will be used for both, co-ordinating and subordinating conjuncts.
+The Penn tag set has used IN tag for prepositions and subordinating conjuncts.
+Their rationale behind this is that subordinating conjuncts and prepositions can
+be distinguished because subordinating conjuncts are followed by a clause and
+prepositions by a noun phrase. \\
+
+\textbf{ WQ Question Words }\\
+
+The Penn tag set makes a distinction between various uses of 'wh-' words and
+marks them accordingly (WDT, WRB, WP, WQ etc). The 'wh-' words in
+English can act as questions, as relative pronouns and as determiners. However,
+for Indian languages we need not keep this distinction. Therefore, we tag the
+question words as WQ. \\
+
+\textbf{QF Quantifiers }\\
+
+All quantifiers like Hindi kama (less), jyAdA (more), bahuwa (lots), etc. will be
+marked as QF. \\
+
+\textbf{QC Cardinals }\\
+
+Any word denoting a cardinal number will be tagged as QC. Penn tag set has a
+tag CD for cardinal numbers and they have not talked of ordinals. \\
+
+\textbf{ QO Ordinals }\\
+
+Expressions denoting ordinals will be marked as QO.\\
+
+\textbf{ CL Classifiers }\\
+
+The tag CL has been included to mark classifiers. Many Indian languages have
+a rich classifier system. “A classifier, in linguistics, is a word or morpheme
+used in some languages to classify a noun according to its meaning.\\
+
+\textbf{INTF Intensifier}\\
+
+This tag is not present in Penn tag set. Words like 'bahuta', 'kama', etc. when
+intensifying adjectives or adverbs will be annotated as INTF. \\
+
+\textbf{INJ Interjection }\\
+
+The interjections will be marked as INJ. Apart from the interjections, the
+affirmatives such as Hindi 'HAz'('yes') will also be tagged as INJ. Since, this is
+the only example of such a word, it has been clubbed under Interjections. \\
+
+\textbf{NEG Negative }\\
+
+Negatives like Hindi 'nahIM' (not), 'nA' (no, not), etc. will be marked as NEG.\\
+
+\textbf{UT Quotative}\\
+
+A quotative introduces a quote. Typically, it is a verb. Many Indian languages
+use quotatives.\\
+
+\textbf{SYM Special Symbol}\\
+
+All those words which cannot be classified in any of the other tags will be
+tagged as SYM. This tag is similar to the Penn 'SYM'.\\
+
+\textbf{*C Compounds }\\
+
+Make it XC – where X is a variable of the
+type of the compound of which the current word is a member.\\
+\textbf{}
+\textbf{}
+\textbf{}
+\textbf{}
 
 %=====================================================================================================================================================
 \chapter{CONCLUSION}
+This chapter provides the conclusion of research study and its future scope.
+
 
 \section{Conclusion}
-For the past many years, several mechanisms for the communication among human-
-machine have been explored. There is much evidence that human speech dictation in
-machine involves the integration of a great variety of knowledge sources, including
-knowledge of the world or context, knowledge of the speaker and/or topic and many
-more. Although there have been significant recent gains in speech dictation, current
-technology is far from human-like: only systems in limited domains can be envisioned
-in the near term, and the portability of existing techniques is still rather limited.
-Application areas that appear to be a good match to technology on the near horizon
-include those that are naturally limited.
-
-The objective of the thesis was “speech pattern recognition for speech to text
-conversion”. The researcher desire was to pronounced the Punjabi character from any
-user, identify it and print it in the text editor. In other word, the recognition of the
-Punjabi character or one can say the dictation of the Punjabi character.
+In this research work, we developed a corpus to tag real time punjabi text. This system has many applications; it can be used by one to learn the Punjabi grammar easily. Part of speech tagging area comes under NLP. In this research work, we use different methods to make it an efficient system. We first use Hidden markovs model POS-tagging algorithms to build on rule-based technique. The concept not only helps the student to learn the grammar for the online source but also helps the teacher to deliver a lecture in a smart classroom. This research work gives clear approach to Hindi learning step by step procedure. The user first create input text according to its need, and after that type the make command in the terminal. This will produce the output file for the tagger.
 
 \section{Future Work}
 
-The speech dictation is a very huge research work area and required a team of skilled
-researcher. Although, the researcher has tried his level best to detect the Punjabi
-character. When the idea of the speech dictation was born in the mind of the
-researcher, his dream was to dictate the Punjabi continuous speech. The work is of
-considerable domain and hence the beginning to end of the work has made with the
-detection of Punjabi characters and with its total analysis. So the present study has scope for the
-continuation of research for all the remaining Punjabi characters, which further can
-be extended in the Punjabi word dictation and ultimately the dictation of words can
-again be extended for the continuous speech dictation in Punjabi language.
-
-Although many recent advances and successes in speaker recognition have been
-achieved, there are still many possible enhancement for which good solutions are to
-be found. Most of these problems arise from variability, including speaker-generated
-variability and variability in channel and recording conditions. It is very important to
-investigate feature parameters that are stable over time, insensitive to the variation of
-speaking manner, including the speaking rate and level, and robust against variations
-in voice quality due to causes such as voice disguise or colds and many more ...
-
-
+The current system only works with the Linux based systems. Our future goal is to make the system that works on all the platforms like windows and the mobile platforms like android and ios...
 
 
 
@@ -1012,112 +1049,6 @@ in voice quality due to causes such as voice disguise or colds and many more ...
 
 
 \begin{thebibliography}{9}
-
-\bibitem{1}
-Chowdhury, Gobinda G. 
-"Natural language processing."
-%Annual review of information science and technology 37.1 (2003): 51­89.
-\textit{Annual review of information science and technology 37.1,} 2003: 5189.
-
-\bibitem{2}
-Kaur, Navdeep,Vandana Pushe, and Rupinderdeep Kaur.
-Natural Language Processing Interface for Synonym."
-\textit{from outside the contents of the document,} 2014.
-
-\bibitem{3}
-Kaur, Kamaldeep, and Vishal Gupta.
-"Name and Entity Recognition for Punjabi Language."
-\textit{Machine translation 2.3,} 2012.
-
-\bibitem{4}Necula, George C."Translation validation for an optimizing compiler."
-\textit{ACM sigplan notices. Vol. 35. No. 5. ACM,} 2000.
-
-
-\bibitem{5}Mac, David, Tom, and Alexendre. "GNU Automake."
-\textit{User Manual, for Automake version 1,} 1995.
-
-\bibitem{6} Calcote, John. "Autotools: A Practitioner's"
-\textit{Guide to GNU Autoconf, Automake, and Libtool. No Starch Press,} 2010.
-
-\bibitem{7}Byrne, William, et al. "Towards language independent acoustic modeling."
-\textit{Acoustics, Speech, and Signal Processing,} 2000. ICASSP'00. Proceedings. 2000 IEEE International Conference on. Vol. 2. IEEE, 2000.
-
-\bibitem{8}Lippmann, Richard P. "Speech recognition by machines and humans."
-\textit{Speech communication 22.1,} 1997.
-
-\bibitem{9} Schultz, TAnja, and Alex. "Language independent and languge adaptive acoustic model for speech recognition."
-\textit{Speech Communication 35.1,} 2001.
-
-\bibitem{10} Walker, Willie, et al. "Sphinx4: A flexible open source framework for speech recognition,", 2004.
-\textit{}
-
-\bibitem{11}Sankar, Fuliang Weng Andreas Stolcke Ananth. "Efficient Lattice Representation and Generation.", 2006.
-\textit{}
-
-\bibitem{12} Dua, Mohit, et al. "Punjabi automatic speech recognition using HTK."
-\textit{IJCSI International Journal of Computer Science Issues 9.4,} 2012.
-
-
-\bibitem{13} Ravinder, Kumar. "Comparison of hmm and dtw for isolated word recognition system of punjabi language."
-\textit{Progress in Pattern Recognition, Image Analysis, Computer Vision, and Applications. Springer Brelin,} 2010.
-
-\bibitem{14}Grasch, Peter, Alexander Felfernig, and Florian Reinfrank. "ReComment: Towards critiquing-
-based recommendation with speech interaction."
-\textit{Proceedings of the 7th ACM Conference on Recommender Systems. ACM,} 2013.
-
-\bibitem{15}Ravinder, and Rajendra Kumar Sharma. "An efficient post processing algorithm for online handwriting Gurmukhi character recognition using set theory."
-\textit{International Journal of Pattern Recognition and Artificial Intelligence 27.04,} 2013.
-
-\bibitem{16}Bansal, Divya, Ankita Goel, and Khushneet Jindal. "Punjabi Speech Synthesis System Using Htk."
-\textit{International Journal of Information 2.4,} 2012.
-
-\bibitem{17}Dua, Mohit, et al. "Punjabi speech to text system for connected words.", 2012.
-\textit{}
-
-\bibitem{18}Ghai, Wiqas, and Navdeep Singh. "Continuous Speech Recognition for Punjabi."2013.
-\textit{}
-
-\bibitem{19}
-http://www.programmershare.com/
-%\textit{}
-
-\bibitem{20}
-http://cmusphinx.sourceforge.net/wiki/
-%\textit{}
-
-\bibitem{21}
-[6]Kumbharana, Chandresh K."Speech Pattern Recognition for Speech to Text Conversion."
-\textit{Diss. Saurashtra University,} 2007.
-
-\bibitem{22} Electronics for U may 2000
-%\textit{}
-
-\bibitem{23}IBM, Developing voice applications.
-%\textit{}
-
-\bibitem{24} https://en.wikipedia.org/wiki/Ubuntu\_(28operating\_system)
-\textit{}
-
-\bibitem{25}http://www.gnu.org/software/bison/
-\textit{}
-
-\bibitem{26}http://www.swig.org/Doc1.3/Library.html
-\textit{}
-
-\bibitem{27}https://en.wikipedia.org/wiki/GStreamer
-\textit{}
-
-\bibitem{28}http://gstreamer.freedesktop.org/features/
-\textit{}
-
-\bibitem{29}https://launchpad.net/ubuntu/precise/+package/pythondev
-\textit{}
-
-\bibitem{30}http://sourceforge.net/projects/cmusphinx/files/sphinxtrain/5prealpha/
-\textit{}
-
-\bibitem{31}https://www.gnu.org/software/automake/
-\textit{}
 
 
 
